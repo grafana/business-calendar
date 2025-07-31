@@ -2,7 +2,7 @@
 
 ![Business Calendar Screenshot](https://github.com/VolkovLabs/business-calendar/raw/main/src/img/screenshot.png)
 
-[![Grafana](https://img.shields.io/badge/Grafana-12.0-orange)](https://grafana.com)
+[![Grafana](https://img.shields.io/badge/Grafana-12.1-orange)](https://grafana.com)
 [![CI](https://github.com/volkovlabs/business-calendar/workflows/CI/badge.svg)](https://github.com/volkovlabs/business-calendar/actions/workflows/ci.yml)
 [![E2E](https://github.com/volkovlabs/business-calendar/workflows/E2E/badge.svg)](https://github.com/volkovlabs/business-calendar/actions/workflows/e2e.yml)
 [![Codecov](https://codecov.io/gh/VolkovLabs/business-calendar/branch/main/graph/badge.svg)](https://codecov.io/gh/VolkovLabs/business-calendar)
@@ -70,13 +70,6 @@ Subscribe to [Business Suite Enterprise](https://volkovlabs.io/pricing/) for pre
 - Priority handling for feature requests and bug fixes.
 - In-person consultations.
 - Access to an advanced Business Intelligence platform.
-
-## 💬 Feedback & Contributions
-
-We value your input and welcome contributions to improve Business Calendar:
-
-- **Issues**: Report bugs or suggest enhancements on [GitHub Issues](https://github.com/volkovlabs/business-calendar/issues).
-- **Community**: Subscribe to [Volkov Labs on YouTube](https://youtube.com/@volkovlabs) and share your thoughts in video comments.
 
 ## 📜 License
 
