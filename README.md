@@ -1,18 +1,17 @@
 # Business Calendar for Grafana
 
-![Business Calendar Screenshot](https://github.com/VolkovLabs/business-calendar/raw/main/src/img/screenshot.png)
+[![CI](https://github.com/grafana/business-charts/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-charts/actions/workflows/push.yml)
+[![CD](https://github.com/grafana/business-charts/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-charts/actions/workflows/publish.yml)
+[![License](https://img.shields.io/github/license/grafana/business-charts)](https://github.com/grafana/business-forms/blob/main/LICENSE)
 
-[![Grafana](https://img.shields.io/badge/Grafana-12.1-orange)](https://grafana.com)
-[![CI](https://github.com/volkovlabs/business-calendar/workflows/CI/badge.svg)](https://github.com/volkovlabs/business-calendar/actions/workflows/ci.yml)
-[![E2E](https://github.com/volkovlabs/business-calendar/workflows/E2E/badge.svg)](https://github.com/volkovlabs/business-calendar/actions/workflows/e2e.yml)
-[![Codecov](https://codecov.io/gh/VolkovLabs/business-calendar/branch/main/graph/badge.svg)](https://codecov.io/gh/VolkovLabs/business-calendar)
-[![CodeQL](https://github.com/VolkovLabs/business-calendar/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/VolkovLabs/business-calendar/actions/workflows/codeql-analysis.yml)
+>This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-calendar) - thanks for all your great work!
+>
+>We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-calendar/blob/main/NOTICES).
+
+This project is currently maintained by Grafana Labs. We welcome pull requests and will review them on a best-effort basis. If you're interested in taking on this project long-term, contact [integrations@grafana.com](mailto:integrations@grafana.com). We're eager to work with new maintainers and eventually hand over the project.
 
 **Business Calendar** is a powerful Grafana plugin that transforms your data into an intuitive calendar view. Seamlessly visualize schedules, deadlines, and time-based metrics from any Grafana-supported data source.
 
-## 📺 Watch Overview and Tutorial Video
-
-[![Business Calendar 3.1.0 | Overview and Detailed Tutorial](https://raw.githubusercontent.com/volkovlabs/business-calendar/main/img/business.png)](https://youtu.be/CvLqyY2fQfo)
 
 ## 🚀 Features
 
@@ -42,10 +41,6 @@ Get started with Business Calendar in just a few steps:
 2. Restart Grafana to load the plugin.
 3. Add the **Business Calendar** panel to your dashboard and configure your data source.
 
-### 📺 **Need help with installation?**
-
-[![Install Business Suite Plugins in Cloud, OSS, Enterprise](https://raw.githubusercontent.com/volkovlabs/.github/main/started.png)](https://youtu.be/1qYzHfPXJF8)
-
 ## 📚 Documentation
 
 Explore comprehensive guides and resources to master the plugin:
@@ -58,12 +53,7 @@ Explore comprehensive guides and resources to master the plugin:
 | [Tutorials](https://volkovlabs.io/plugins/business-calendar/tutorials/)              | Follow step-by-step guides for practical setups. |
 | [Release Notes](https://volkovlabs.io/plugins/business-calendar/release/)            | Stay updated on new features and fixes.          |
 
-## 🌟 Business Suite for Grafana
-
-Business Calendar is part of the **Business Suite**, a collection of open-source Grafana plugins by [Volkov Labs](https://volkovlabs.io/). These plugins are crafted to address common business challenges with user-friendly interfaces, detailed documentation, and supporting video tutorials.
-
-[![Business Suite for Grafana](https://raw.githubusercontent.com/VolkovLabs/.github/main/business.png)](https://volkovlabs.io/plugins/)
 
 ## 📜 License
 
-This project is licensed under the [Apache License 2.0](https://github.com/volkovlabs/business-calendar/blob/main/LICENSE).
+This project is licensed under the [Apache License 2.0](https://github.com/grafana/business-forms/blob/main/LICENSE).
