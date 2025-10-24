@@ -5,7 +5,6 @@
     "@grafana/data": "^12.1.0",
     "@grafana/runtime": "^12.1.0",
     "@grafana/ui": "^12.1.0",
-    "@types/react-virtualized-auto-sizer": "^1.0.4",
     "@volkovlabs/components": "^4.5.0",
     "dayjs": "^1.11.13",
     "i18next": "^25.3.2",
@@ -13,7 +12,6 @@
     "react-big-calendar": "^1.19.4",
     "react-dom": "18.3.1",
     "react-i18next": "^15.6.1",
-    "react-virtualized-auto-sizer": "^1.0.26",
     "tslib": "^2.8.0"
   },
   "description": "Displays events in a sleek calendar view, pulling from diverse data sources for seamless integration",
