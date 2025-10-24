@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/grafana/business-charts/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-charts/actions/workflows/push.yml)
 [![CD](https://github.com/grafana/business-charts/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-charts/actions/workflows/publish.yml)
-[![License](https://img.shields.io/github/license/grafana/business-charts)](https://github.com/grafana/business-forms/blob/main/LICENSE)
+[![License](https://img.shields.io/github/license/grafana/business-charts)](https://github.com/grafana/business-calendar/blob/main/LICENSE)
 
 >This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-calendar) - thanks for all your great work!
 >
@@ -56,4 +56,4 @@ Explore comprehensive guides and resources to master the plugin:
 
 ## 📜 License
 
-This project is licensed under the [Apache License 2.0](https://github.com/grafana/business-forms/blob/main/LICENSE).
+This project is licensed under the [Apache License 2.0](https://github.com/grafana/business-calendar/blob/main/LICENSE).
