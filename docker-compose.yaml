@@ -48,7 +48,7 @@ services:
     profiles:
       - dependency
 
-  test:
+  playwright:
     build:
       context: .
       dockerfile: test/Dockerfile
@@ -62,3 +62,4 @@ services:
         condition: service_healthy
     profiles:
       - e2e
+      - playwright
