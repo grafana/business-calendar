@@ -1,8 +1,8 @@
 # Business Calendar for Grafana
 
-[![CI](https://github.com/grafana/business-charts/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-charts/actions/workflows/push.yml)
-[![CD](https://github.com/grafana/business-charts/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-charts/actions/workflows/publish.yml)
-[![License](https://img.shields.io/github/license/grafana/business-charts)](https://github.com/grafana/business-calendar/blob/main/LICENSE)
+[![CI](https://github.com/grafana/business-calendar/actions/workflows/push.yml/badge.svg)](https://github.com/grafana/business-calendar/actions/workflows/push.yml)
+[![CD](https://github.com/grafana/business-calendar/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-calendar/actions/workflows/publish.yml)
+[![License](https://img.shields.io/github/license/grafana/business-calendar)](https://github.com/grafana/business-calendar/blob/main/LICENSE)
 
 >This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-calendar) - thanks for all your great work!
 >
