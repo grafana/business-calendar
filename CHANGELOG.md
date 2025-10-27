@@ -4,6 +4,12 @@ All notable changes to the **Business Calendar Panel** plugin for Grafana are do
 
 This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.2.0] - 2025-10-23
+
+### Project Updates
+
+- Grafana Labs fork.
+
 ## [4.1.0] - 2025-08-19
 
 ### Changed
