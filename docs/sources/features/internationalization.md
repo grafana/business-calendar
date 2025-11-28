@@ -6,7 +6,6 @@ labels:
     - enterprise
     - oss
     - cloud
-weight: 100
 ---
 
 # Internationalization

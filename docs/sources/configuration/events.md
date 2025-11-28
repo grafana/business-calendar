@@ -6,7 +6,6 @@ labels:
     - enterprise
     - oss
     - cloud
-weight: 300
 ---
 
 # Events
