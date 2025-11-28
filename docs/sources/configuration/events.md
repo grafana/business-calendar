@@ -46,11 +46,9 @@ You can configure which data elements to show in the drawer by selecting them in
 
 ## Tooltip
 
-:::info Version
-
+{{< admonition type="note" >}}
 The tooltip feature is supported starting from version 3.5.0.
-
-:::
+{{< /admonition >}}
 
 You can enable the tooltip, which is displayed when a mouse hovers over the event.
 
@@ -61,11 +59,11 @@ You can enable the tooltip, which is displayed when a mouse hovers over the even
 
 ## Multiple fields in the description
 
-:::info Version
+{{< admonition type="note" >}}
 
 The Multiple fields in the description feature is supported starting from version 3.5.0.
 
-:::
+{{< /admonition >}}
 
 You can specify multiple fields to be displayed in the event description.
 
@@ -76,11 +74,9 @@ You can specify multiple fields to be displayed in the event description.
 
 ## The Description format option
 
-:::info Version
-
+{{< admonition type="note" >}}
 The Description format option feature is supported starting from version 3.5.0.
-
-:::
+{{< /admonition >}}
 
 You might want to apply formatting for better visual display when your event descriptions contain comprehensive details.
 

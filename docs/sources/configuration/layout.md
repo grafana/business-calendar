@@ -61,11 +61,9 @@ Displays 12 months at the same time. The purpose of this view is to help navigat
 
 #### Events
 
-:::info Version
-
+{{< admonition type="note" >}}
 Starting from version 3.8.0, the Business Calendar panel displays dots representing events for that day.
-
-:::
+{{< /admonition >}}
 
 In the **Year** view, the Business Calendar panel displays dots representing events that day. If there are more than 3 events, the plus symbol is shown.
 
@@ -108,11 +106,9 @@ With this setting, you can control what your calendar will look like after a pag
 
 As you know, there is a Language setting in the user profile preference. Along with language this setting also impacts the displayed date formats.
 
-:::info Version
-
+{{< admonition type="note" >}}
 The extended date formats are supported starting from version 3.0.0.
-
-:::
+{{< /admonition >}}
 
 The currently existing choices were not enough for some of our use cases. We added **English 24** and **ISO 8601** formats.
 
@@ -125,11 +121,9 @@ All other options override the user profile settings.
   src="/img/plugins/business-calendar/language-extended.png"
 />
 
-:::info Version
-
+{{< admonition type="note" >}}
 The panel specific language(datetime) format is supported starting from version 3.8.0
-
-:::
+{{< /admonition >}}
 
 The **Date and time format** parameter is specific to the particular Business Calendar panel.
 
@@ -140,11 +134,9 @@ The **Date and time format** parameter is specific to the particular Business Ca
 
 ## Month time
 
-:::info Version
-
+{{< admonition type="note" >}}
 Disable event time feature is supported starting from version 3.5.0.
-
-:::
+{{< /admonition >}}
 
 For the **Month** layout, you can turn off the displaying of the event times.
 
