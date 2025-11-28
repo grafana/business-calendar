@@ -112,7 +112,7 @@ For the **Month** layout, you can turn off the display of event times.
 
 ## Colors
 
-Read about the **Colors** option in the [Coloring events](/plugins/business-calendar/color/) section.
+Read about the **Colors** option in the [Coloring events](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/features/color/) section.
 
 ## Text Size
 

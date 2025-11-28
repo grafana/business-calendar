@@ -17,10 +17,11 @@ The Business Calendar has the following configuration categories: **Business Cal
 
 | Category                       | Description                                             |
 | ------------------------------ | ------------------------------------------------------- |
-| [Business Calendar](../main/)  | Describes the Business Calendar category options.       |
-| [Layout](../layout/)           | Describes the Layout category options.                  |
-| [Events](../events/)           | Describes the Events category options.                  |
-| [Annotations](../annotations/) | Explains how to display and filter Grafana annotations. |
+| [Annotations](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/configuration/annotations/) | Explains how to display and filter Grafana annotations. |
+| [Business Calendar](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/configuration/calendar/)  | Describes the Business Calendar category options.       |
+| [Events](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/configuration/events/)           | Describes the Events category options.                  |
+| [Layout](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/configuration/layout/)           | Describes the Layout category options.                  |
+
 
 ## Native categories
 

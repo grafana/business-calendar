@@ -15,6 +15,6 @@ The Business Calendar includes the following features.
 
 | Section                                         | Description                                                    |
 | ----------------------------------------------- | -------------------------------------------------------------- |
-| [Internationalization](../internationalization) | Internationalization support                                   |
-| [Dashboard Time Zones](../dashboard-timezones)  | Set up the plugin time zone                                    |
-| [Coloring Events](../color)                     | Use colors to improve the visual perception of calendar layout |
+| [Coloring events](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/features/color/) | Use colors to improve the visual perception of calendar layout |
+| [Dashboard time zones](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/features/dashboard-timezones/)  | Set up the plugin time zone |
+| [Internationalization](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/features/internationalization/) | Internationalization support |

@@ -21,4 +21,4 @@ You can adjust the display settings as follows:
 
 ## Business Satellite
 
-The [Business Satellite](/plugins/business-satellite/annotations/) data source can be used as an alternative to display annotations.
+The [Business Satellite](https://volkovlabs.io/plugins/business-satellite/annotations/) data source can be used as an alternative to display annotations.

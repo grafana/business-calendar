@@ -53,18 +53,18 @@ This video provides a detailed review of all configurable options. The video sta
 
 {{< youtube id="CvLqyY2fQfo" >}}
 
-For all other tutorials related to this plugin, refer to [Tutorials](/plugins/business-calendar/tutorials).
+For all other tutorials related to this plugin, refer to [Tutorials](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/tutorials/).
 
 ## Documentation
 
 | Section                             | Description                                                    |
 | ----------------------------------- | -------------------------------------------------------------- |
-| [Basic configuration](basic-config) | Explains plugin basics                                         |
-| [Configuration](sections)           | Describes configuration options                                |
-| [Features](features)                | Describes plugin's features                                    |
-| [Tutorials](tutorials)              | Easy to follow tutorials                                       |
-| [Release Notes](release)            | Stay up to date with the latest features and updates |
+| [Basic configuration](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/basic-config) | Explains plugin basics                                         |
+| [Configuration](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/configuration/)           | Describes configuration options                                |
+| [Features](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/features/)                | Describes plugin's features                                    |
+| [Tutorials](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/tutorials/)              | Easy to follow tutorials                                       |
+| [Release notes](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/release/)            | Stay up to date with the latest features and updates |
 
 ## License
 
-Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-calendar/blob/main/LICENSE).
+Apache License Version 2.0, see [LICENSE](https://github.com/grafana/business-calendar/blob/main/LICENSE).

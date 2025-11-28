@@ -14,4 +14,4 @@ The Business Calendar panel uses the language you specify in the user profile me
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/i18n.png" class="border" alt="UI Internationalization on the Business Calendar panel." >}}
 
-For more information about language and date and time settings, refer to **Date and time format** in the [Layout](/plugins/business-calendar/layout/#date-and-time-format) section.
+For more information about language and date and time settings, refer to **Date and time format** in the [Layout](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/configuration/layout/#date-and-time-format) section.
