@@ -1,0 +1,50 @@
+---
+title: Tutorials
+description: Learn how to use the Business Calendar plugin through step-by-step video tutorials.
+labels:
+  products:
+    - enterprise
+    - oss
+    - cloud
+weight: 50
+---
+
+# Tutorials
+
+This page contains clear, step-by-step video tutorials that showcase new features and tackle the most common challenges users face. The goal is to make your experience with Business Suite as seamless and productive as possible.
+
+## Features overview of the Business Calendar 3.1.0
+
+Dive into the latest features of the Business Calendar plugin with this comprehensive overview of version 3.1.0. This video walks you through the process of fetching publicly available data from the Grafana plugin catalog and shows you how to customize the plugin's options to transform the panel's appearance and behavior.
+
+Whether you're new to the plugin or want to explore advanced configurations, this tutorial provides valuable insights into maximizing the plugin's potential for your dashboards.
+
+{{< youtube id="CvLqyY2fQfo" >}}
+
+## How to Use Business Suite to create a release dashboard in Grafana
+
+Learn how to build a release dashboard in Grafana using the Business Suite panels. This video breaks down the step-by-step process of configuring a release dashboard, highlighting the role of each Business Suite panel in creating a cohesive and informative visualization.
+
+This tutorial helps project managers and developers streamline release tracking and improve team collaboration with Grafana.
+
+{{< youtube id="tUGRQBBZoRQ" >}}
+
+## Configure and display events from PostgreSQL
+
+Get started with the Business Calendar 2.4.0 plugin by learning how to integrate it with a PostgreSQL data source. This beginner-friendly video guides you through the essentials, including plugin installation, customizing color options, creating clickable links for calendar events, and exploring additional features.
+
+Use this tutorial as a starting point to display database-driven events on a Grafana dashboard.
+
+{{< youtube id="6WGmm5y4fs4" >}}
+
+## Display events from JSON API data source using the Business Calendar 1.0.0
+
+Discover the origins of the Business Calendar plugin with this introductory video on version 1.0.0. The video demonstrates how to connect the plugin with the [JSON API data source](https://grafana.com/grafana/plugins/marcusolsson-json-datasource/) to display events on your Grafana dashboard.
+
+As the first tutorial in the series, this video provides a foundational understanding of the plugin's capabilities and integration options for users new to Grafana visualizations.
+
+{{< youtube id="iPJ122x0oos" >}}
+
+## Conclusion
+
+The Business Calendar plugin for Grafana offers a versatile way to visualize events and timelines on your dashboards. From fetching data from various sources like PostgreSQL and JSON APIs to creating customized release dashboards with the Business Suite, these tutorials cover a wide range of use cases for both beginners and advanced users. Whether you're tracking project milestones, managing releases, or displaying critical dates, the Business Calendar plugin provides the flexibility and functionality you need. Explore the videos above to learn how to configure and customize the plugin for your specific requirements.
