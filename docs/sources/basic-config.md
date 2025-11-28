@@ -26,16 +26,10 @@ For the plugin to work, you must provide a mapping for two mandatory data elemen
 | Labels      | No       | Event labels. Supports multiple comma-separated values.                                                                            |
 | Color       | No       | Event background color. Specify a number field. Grafana will color the event background according to the specified **Thresholds**. |
 
-<Image
-  title="Map the fields in the Data category."
-  src="/img/plugins/business-calendar/calendar-data.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/calendar-data.png" class="border" alt="Map the fields in the Data category." >}}
 
 ## Week Start
 
 For the **Week** and **Month** layouts, the plugin considers the Grafana system settings when choosing the first day of the week - Saturday, Sunday, or Monday, or uses the default day from Grafana settings.
 
-<Image
-  title="You can specify the first day of the week in the user or organization preferences."
-  src="/img/plugins/business-calendar/week-start.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/week-start.png" class="border" alt="You can specify the first day of the week in the user or organization preferences." >}}

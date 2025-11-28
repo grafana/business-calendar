@@ -12,11 +12,7 @@ weight: 100
 
 The **Business Calendar** category consists of two parameters at the moment:
 
-<Image
-  title="The Business Calendar category."
-  src="/img/plugins/business-calendar/bus-calendar-section.png"
-  width="40%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/bus-calendar-section.png" class="border" alt="The Business Calendar category." >}}
 
 ## Scroll to Time
 
@@ -28,10 +24,7 @@ One is when the Calendar panel itself is stretched out to a bigger size than you
 
 Another scenario is when the Calendar panel itself is fully visible in your browser window, but the calendar has to be scrolled within the panel. In that event, the Scroll to Time option takes effect. Scenario 2 is in the picture below.
 
-<Image
-  title="The Scroll to Time option explained."
-  src="/img/blog/2023-11-01-calendar-panel-2.3.0/scroll.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/scroll.png" class="border" alt="The Scroll to Time option explained." >}}
 
 ## Extended date formats
 
@@ -39,7 +32,4 @@ As you know, there is a Language setting in the user profile preference. Along w
 
 The currently existing choices were not enough for some of our use cases. We added **English 24** and **ISO 8601** formats.
 
-<Image
-  title="Use the Date and time format option to overwrite the user language setting."
-  src="/img/blog/2024-05-14-calendar-panel-3.0.0/language.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/language.png" class="border" alt="Use the Date and time format option to overwrite the user language setting." >}}

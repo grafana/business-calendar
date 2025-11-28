@@ -12,7 +12,4 @@ weight: 200
 
 The Business Calendar panel supports dashboard time zones. Before this feature has been implemented, it synched with the browser time zone.
 
-<Image
-  title="The Business Calendar panel automatically syncs with the selected dashboard time zone."
-  src="/img/blog/2023-10-06-calendar-panel-2.2.0/timezone.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/timezone.png" class="border" alt="The Business Calendar panel automatically syncs with the selected dashboard time zone." >}}

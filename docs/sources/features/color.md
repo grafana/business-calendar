@@ -18,35 +18,22 @@ You can color events based on the following **Layout**:
 - **Event**,
 - **Thresholds**.
 
-<Image
-  title="Color event base on one of these three options."
-  src="/img/plugins/business-calendar/colors-by.png"
-  width="70%"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/colors-by.png" class="border" alt="Color event base on one of these three options." >}}
 
 ## Frame
 
 All events from the same data frame are colored with the same color. This coloring works when the **Data**->**Color** field is set to NULL.
 
-<Image
-  title="Select Frame to color events following their frame."
-  src="/img/plugins/business-calendar/frame.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/frame.png" class="border" alt="Select Frame to color events following their frame." >}}
 
 ## Event
 
 All events are colored with a different color. This coloring works when the **Data**->**Color** field is set to NULL.
 
-<Image
-  title="All events are colored with a different color."
-  src="/img/plugins/business-calendar/event.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/event.png" class="border" alt="All events are colored with a different color." >}}
 
 ## Thresholds
 
 You can color events in different tones based on whether their values fall within a specific threshold. In addition, you can choose a classic color palette in the plugin's options.
 
-<Image
-  title="Events are colored based on the value in the Color field and configured Grafana thresholds."
-  src="/img/plugins/business-calendar/threshold.png"
-/>
+{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/threshold.png" class="border" alt="Events are colored based on the value in the Color field and configured Grafana thresholds." >}}
