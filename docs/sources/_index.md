@@ -28,10 +28,7 @@ The Business Calendar panel is a Grafana plugin that displays events in a stylis
 
 You can install the Business Calendar panel plugin from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/) or use the Grafana command line tool.
 
-<Youtube
-  id="1qYzHfPXJF8"
-  title="Install Business Suite plugins in Cloud, OSS, Enterprise. Getting started with the Business Suite."
-/>
+{{< youtube id="1qYzHfPXJF8" >}}
 
 For the latter, please use the following command:
 
@@ -56,10 +53,7 @@ grafana cli plugins install marcusolsson-calendar-panel
 
 This video is a detailed review of all configurable options. To ensure you can follow, Daria starts with fetching publicly available Grafana plugin catalog data and then demonstrates how the Business Calendar plugin options change the panel appearance and behavior.
 
-<Youtube
-  id="CvLqyY2fQfo"
-  title="Overview and detailed tutorial. Display dates and time in Grafana."
-/>
+{{< youtube id="CvLqyY2fQfo" >}}
 
 We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-calendar/tutorials).
 
