@@ -8,6 +8,7 @@ labels:
     - cloud
 weight: 100
 ---
+
 # Internationalization
 
 The language you specify in the user profile menu will be used throughout the Business Calendar panel on the dashboard as well as in the edit mode for panel options.

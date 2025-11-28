@@ -8,6 +8,7 @@ labels:
     - cloud
 weight: 300
 ---
+
 # Coloring Events
 
 You may color events using the Business Calendar plugin to improve the visual perception of the calendar layout. Colors can be used to represent distinct event types, different priorities, and so on.
@@ -22,13 +23,13 @@ You can color events based on the following **Layout**:
 
 ## Frame
 
-All events from the same data frame are colored with the same color. This coloring works when the **Data**->**Color** field is set to NULL.
+All events from the same data frame are colored with the same color. This coloring works when the **Data > Color** field is set to NULL.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/frame.png" class="border" alt="Select Frame to color events following their frame." >}}
 
 ## Event
 
-All events are colored with a different color. This coloring works when the **Data**->**Color** field is set to NULL.
+All events are colored with a different color. This coloring works when the **Data > Color** field is set to NULL.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/event.png" class="border" alt="All events are colored with a different color." >}}
 

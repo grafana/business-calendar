@@ -1,5 +1,5 @@
 ---
-title: Release Notes
+title: Release notes
 description: Learn about updates, new features, enhancements, and fixes for the Business Calendar panel.
 labels:
   products:
@@ -8,7 +8,8 @@ labels:
     - cloud
 weight: 60
 ---
-# Release Notes
+
+# Release notes
 
 Stay informed about the Business Calendar panel’s updates with these release notes, summarizing new features, enhancements, and fixes across all versions.
 

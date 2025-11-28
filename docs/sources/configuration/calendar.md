@@ -8,13 +8,14 @@ labels:
     - cloud
 weight: 100
 ---
+
 # Business Calendar
 
 The **Business Calendar** category consists of two parameters at the moment:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/bus-calendar-section.png" max-width="40%" class="border" alt="The Business Calendar category." >}}
 
-## Scroll to Time
+## Scroll to time
 
 This setting applies to the **Day** and **Week** views. The Business Calendar panel ensures that the specified in this option time is always visible.
 
@@ -30,6 +31,6 @@ Another scenario is when the Calendar panel itself is fully visible in your brow
 
 As you know, there is a Language setting in the user profile preference. Along with language this setting also impacts the displayed date formats.
 
-The currently existing choices were not enough for some of our use cases. We added **English 24** and **ISO 8601** formats.
+The existing choices weren't sufficient for all use cases, so the **English 24** and **ISO 8601** formats were added.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/language.png" class="border" alt="Use the Date and time format option to overwrite the user language setting." >}}

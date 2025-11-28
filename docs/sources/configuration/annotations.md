@@ -8,6 +8,7 @@ labels:
     - cloud
 weight: 400
 ---
+
 # Annotations
 
 The Business Calendar panel plugin allows displaying and filtering Grafana annotations.

@@ -8,6 +8,7 @@ labels:
     - cloud
 weight: 200
 ---
+
 # Layout
 
 The **Layout** category consists of the following parameters at the moment:
@@ -84,9 +85,9 @@ As you know, there is a Language setting in the user profile preference. Along w
 The extended date formats are supported starting from version 3.0.0.
 {{< /admonition >}}
 
-The currently existing choices were not enough for some of our use cases. We added **English 24** and **ISO 8601** formats.
+The existing choices weren't sufficient for all use cases, so the **English 24** and **ISO 8601** formats were added.
 
-If the **Date and time format** is set to **User selection**, the language preferece is taken from the User profile-> Prefereneces->Language.
+If the **Date and time format** is set to **User selection**, the language preference is taken from the User profile > Preferences >Language.
 
 All other options override the user profile settings.
 

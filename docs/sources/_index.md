@@ -8,6 +8,7 @@ labels:
     - cloud
 weight: 10
 ---
+
 # Business Calendar
 
 The Business Calendar panel is a Grafana plugin that displays events in a stylish calendar format. The data can come from various data sources.
@@ -21,7 +22,7 @@ The Business Calendar panel is a Grafana plugin that displays events in a stylis
 - Calendar panel 2.X requires **Grafana 9.2** or **Grafana 10**.
 - Calendar panel 1.X requires **Grafana 8.5** or **Grafana 9**.
 
-## Getting Started
+## Getting started
 
 You can install the Business Calendar panel plugin from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/) or use the Grafana command line tool.
 
@@ -48,11 +49,11 @@ grafana cli plugins install marcusolsson-calendar-panel
 
 ## Tutorial
 
-This video is a detailed review of all configurable options. To ensure you can follow, Daria starts with fetching publicly available Grafana plugin catalog data and then demonstrates how the Business Calendar plugin options change the panel appearance and behavior.
+This video is a detailed review of all configurable options. To ensure you can follow, the video starts with fetching publicly available Grafana plugin catalog data and then demonstrates how the Business Calendar plugin options change the panel appearance and behavior.
 
 {{< youtube id="CvLqyY2fQfo" >}}
 
-We have many other tutorials that you can find helpful. You can review all related to this plugin tutorials [here](/plugins/business-calendar/tutorials).
+For all other tutorials related to this plugin, refer to [Tutorials](/plugins/business-calendar/tutorials).
 
 ## Documentation
 
@@ -67,5 +68,3 @@ We have many other tutorials that you can find helpful. You can review all relat
 ## License
 
 Apache License Version 2.0, see [LICENSE](https://github.com/volkovlabs/business-calendar/blob/main/LICENSE).
-
-

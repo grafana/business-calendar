@@ -8,6 +8,7 @@ labels:
     - cloud
 weight: 300
 ---
+
 # Events
 
 The first parameter of the **Events** category is **On click**:

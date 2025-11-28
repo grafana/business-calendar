@@ -8,6 +8,7 @@ labels:
     - cloud
 weight: 40
 ---
+
 # Features
 
 The Business Calendar has the following features.

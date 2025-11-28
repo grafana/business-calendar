@@ -1,5 +1,5 @@
 ---
-title: Dashboard Time Zones
+title: Dashboard time zones
 description: Learn how the Business Calendar panel supports dashboard time zones.
 labels:
   products:
@@ -8,7 +8,8 @@ labels:
     - cloud
 weight: 200
 ---
-# Dashboard Time Zones
+
+# Dashboard time zones
 
 The Business Calendar panel supports dashboard time zones. Before this feature has been implemented, it synched with the browser time zone.
 

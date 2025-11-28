@@ -8,11 +8,12 @@ labels:
     - cloud
 weight: 20
 ---
+
 # Basic configuration
 
 The Business Calendar panel allows you to load events from any data source and display them on your Grafana dashboard.
 
-## The Data category
+## The data category
 
 For the plugin to work, you must provide a mapping for two mandatory data elements **Text** and **Start time**. You also can define optional fields to make your calendar more informative.
 
@@ -28,7 +29,7 @@ For the plugin to work, you must provide a mapping for two mandatory data elemen
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/calendar-data.png" class="border" alt="Map the fields in the Data category." >}}
 
-## Week Start
+## Week start
 
 For the **Week** and **Month** layouts, the plugin considers the Grafana system settings when choosing the first day of the week - Saturday, Sunday, or Monday, or uses the default day from Grafana settings.
 
