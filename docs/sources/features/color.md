@@ -1,0 +1,56 @@
+---
+tags:
+  - Business Calendar
+image: /img/plugins/business-calendar/colors.png
+title: 'Coloring Events'
+description: 'Learn about Coloring Events in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+weight: 300
+---
+import Image from "@theme/Image";
+
+# Coloring Events
+
+You may color events using the Business Calendar plugin to improve the visual perception of the calendar layout. Colors can be used to represent distinct event types, different priorities, and so on.
+
+You can color events based on the following **Layout**:
+
+- **Frame**,
+- **Event**,
+- **Thresholds**.
+
+<Image
+  title="Color event base on one of these three options."
+  src="/img/plugins/business-calendar/colors-by.png"
+  width="70%"
+/>
+
+## Frame
+
+All events from the same data frame are colored with the same color. This coloring works when the **Data**->**Color** field is set to NULL.
+
+<Image
+  title="Select Frame to color events following their frame."
+  src="/img/plugins/business-calendar/frame.png"
+/>
+
+## Event
+
+All events are colored with a different color. This coloring works when the **Data**->**Color** field is set to NULL.
+
+<Image
+  title="All events are colored with a different color."
+  src="/img/plugins/business-calendar/event.png"
+/>
+
+## Thresholds
+
+You can color events in different tones based on whether their values fall within a specific threshold. In addition, you can choose a classic color palette in the plugin's options.
+
+<Image
+  title="Events are colored based on the value in the Color field and configured Grafana thresholds."
+  src="/img/plugins/business-calendar/threshold.png"
+/>

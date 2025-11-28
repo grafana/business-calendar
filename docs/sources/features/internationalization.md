@@ -1,0 +1,24 @@
+---
+tags:
+  - Business Calendar
+image: /img/plugins/business-calendar/i18n.png
+title: 'Internationalization'
+description: 'Learn about Internationalization in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+weight: 100
+---
+import Image from "@theme/Image";
+
+# Internationalization
+
+The language you specify in the user profile menu will be used throughout the Business Calendar panel on the dashboard as well as in the edit mode for panel options.
+
+<Image
+  title="UI Internationalization on the Business Calendar panel."
+  src="/img/plugins/business-calendar/i18n.png"
+/>
+
+Read more about language and date and time settings in the description of the **Date and time format** in the [Layout](/plugins/business-calendar/layout/#date-and-time-format) section.

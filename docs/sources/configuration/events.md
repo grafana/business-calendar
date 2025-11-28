@@ -1,0 +1,101 @@
+---
+tags:
+  - Business Calendar
+image: /img/plugins/business-calendar/schema.png
+title: 'Events'
+description: 'Learn about Events in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+weight: 300
+---
+import Image from "@theme/Image";
+
+# Events
+
+The first parameter of the **Events** category is **On click**:
+
+- **Open Link** instructs the plugin to open an assigned link,
+- **Show Details** instructs the plugin to open a drawer.
+
+## Links
+
+The links are configured in the **Data links** category which is common for all Grafana plugins category. In the picture below the link is specified as follows:
+
+- `__data` is a reference to a retrieved data frame,
+- `fields` is a reference to the retrieved data frame fields,
+- `url` is a reference to a retrieved field name.
+
+<Image
+  title="On click parameter determines the plugin action upon a user click event."
+  src="/img/plugins/business-calendar/events-section.png"
+/>
+
+## Drawer with event details
+
+A drawer is a pop-up window that opens on the right-hand side of your browser and displays event details.
+
+<Image
+  title="Event drawer example."
+  src="/img/plugins/business-calendar/drawer-location.png"
+/>
+
+You can configure which data elements to show in the drawer by selecting them in the **Details info** parameter (see the first image on this page).
+
+<Image
+  title="A drawer dissection."
+  src="/img/plugins/business-calendar/drawer-dissect.png"
+/>
+
+## Tooltip
+
+:::info Version
+
+The tooltip feature is supported starting from version 3.5.0.
+
+:::
+
+You can enable the tooltip, which is displayed when a mouse hovers over the event.
+
+<Image
+  title="The tooltip feature."
+  src="/img/plugins/business-calendar/tooltip-more.png"
+/>
+
+## Multiple fields in the description
+
+:::info Version
+
+The Multiple fields in the description feature is supported starting from version 3.5.0.
+
+:::
+
+You can specify multiple fields to be displayed in the event description.
+
+<Image
+  title="Multiple fields in the description."
+  src="/img/blog/2024-08-15-calendar-panel-3.5.0/multiple.png"
+/>
+
+## The Description format option
+
+:::info Version
+
+The Description format option feature is supported starting from version 3.5.0.
+
+:::
+
+You might want to apply formatting for better visual display when your event descriptions contain comprehensive details.
+
+Your options for the description formatting are:
+
+- **Inline**. You can use simple HTML formatting tags to have different font sizes, colors, etc.
+- **Preformatted** is very similar to the HTML tag `<pre>`. Text is displayed in a fixed-width font, with spaces and line breaks preserved. The text is displayed "as is".
+
+The illustration below shows how the same description text is interpreted depending on the selected **Description format** option.
+
+<Image
+  title="The description formatting options."
+  src="/img/blog/2024-08-15-calendar-panel-3.5.0/details-formatting.png"
+/>

@@ -1,0 +1,171 @@
+---
+tags:
+  - Business Calendar
+image: /img/plugins/business-calendar/layout.png
+title: 'Layout'
+description: 'Learn about Layout in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+weight: 200
+---
+import Image from "@theme/Image";
+
+# Layout
+
+The **Layout** category consists of the following parameters at the moment:
+
+<Image
+  title="The Layout category."
+  src="/img/plugins/business-calendar/layout.png"
+  width="60%"
+/>
+
+## Views
+
+### Day
+
+Displays a day.
+
+<Image title="The Day Layout." src="/img/plugins/business-calendar/day.png" />
+
+### Week and Work week
+
+Displays a week with 7 or 5 days respectively.
+
+<Image
+  title="The Week and Work Week Layouts."
+  src="/img/plugins/business-calendar/week-5-7.png"
+/>
+
+#### First day of the week
+
+The plugin considers the Grafana system settings when choosing the first day of the week - Saturday, Sunday, or Monday, or uses the default day from Grafana settings.
+
+<Image
+  title="Grafana start week setting."
+  src="/img/plugins/business-calendar/week-start-pref.png"
+/>
+
+### Month
+
+Displays a month.
+
+<Image
+  title="The Month Layout."
+  src="/img/plugins/business-calendar/month.png"
+/>
+
+### Year
+
+Displays 12 months at the same time. The purpose of this view is to help navigate throughout the calendar since it makes it easier to jump into any day and month of the year.
+
+<Image title="The Year layout." src="/img/plugins/business-calendar/year.png" />
+
+#### Events
+
+:::info Version
+
+Starting from version 3.8.0, the Business Calendar panel displays dots representing events for that day.
+
+:::
+
+In the **Year** view, the Business Calendar panel displays dots representing events that day. If there are more than 3 events, the plus symbol is shown.
+
+The multi-day events are displayed as one dot per day. For instance, if an event lasts from September 16 to September 17 (two day event), two dots are shown on the panel, one dot for September 16 and the other dot for September 17.
+
+<Image
+  title="Displaying events in a day on the Year view."
+  src="/img/blog/2024-11-28-calendar-panel-3.8.0/year.png"
+/>
+
+### Agenda
+
+Displays only the busy time slots and shows multiple days for the selected period.
+
+<Image
+  title="The Agenda layout."
+  src="/img/plugins/business-calendar/agenda.gif"
+/>
+
+## Available views
+
+You can configure which view(s) will be available for an end-user.
+
+<Image
+  title="An end user can only select from the allowed options. In this example, Week, Month, and Year are allowed."
+  src="/img/plugins/business-calendar/allowed.png"
+/>
+
+## Default view
+
+With this setting, you can control what your calendar will look like after a page refresh. Any of the calendar views can be selected as a default view.
+
+<Image
+  title="The Default View option."
+  src="/img/plugins/business-calendar/default-view.png"
+  width="75%"
+/>
+
+## Date and time format
+
+As you know, there is a Language setting in the user profile preference. Along with language this setting also impacts the displayed date formats.
+
+:::info Version
+
+The extended date formats are supported starting from version 3.0.0.
+
+:::
+
+The currently existing choices were not enough for some of our use cases. We added **English 24** and **ISO 8601** formats.
+
+If the **Date and time format** is set to **User selection**, the language preferece is taken from the User profile-> Prefereneces->Language.
+
+All other options override the user profile settings.
+
+<Image
+  title="Use the Date and time format option to overwrite the user language setting."
+  src="/img/plugins/business-calendar/language-extended.png"
+/>
+
+:::info Version
+
+The panel specific language(datetime) format is supported starting from version 3.8.0
+
+:::
+
+The **Date and time format** parameter is specific to the particular Business Calendar panel.
+
+<Image
+  title="The Business Calendar panel allows panel-specific language(datetime) configuration."
+  src="/img/blog/2024-11-28-calendar-panel-3.8.0/languages.png"
+/>
+
+## Month time
+
+:::info Version
+
+Disable event time feature is supported starting from version 3.5.0.
+
+:::
+
+For the **Month** layout, you can turn off the displaying of the event times.
+
+<Image
+  title="You can hide event time for the Month layout."
+  src="/img/blog/2024-08-15-calendar-panel-3.5.0/month-time.png"
+/>
+
+## Colors
+
+Read about the **Colors** option in the [Coloring events](/plugins/business-calendar/color/) section.
+
+## Text Size
+
+You can control the font size in your Calendar panel. By default, the size is 12px.
+
+<Image
+  title="You can control the font size in your Calendar panel."
+  src="/img/blog/2024-08-15-calendar-panel-3.5.0/text-size.png"
+/>

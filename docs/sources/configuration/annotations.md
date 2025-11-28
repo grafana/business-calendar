@@ -1,0 +1,35 @@
+---
+tags:
+  - Business Calendar
+  - Annotations
+image: /img/plugins/business-calendar/annotations.png
+title: 'Annotations'
+description: 'Learn about Annotations in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+weight: 400
+---
+import Image from "@theme/Image";
+
+# Annotations
+
+The Business Calendar panel plugin allows displaying and filtering Grafana annotations.
+
+You can adjust the display settings as follows:
+
+- **Type** - allows you to display:
+  - both alerts and annotations,
+  - alerts only,
+  - annotations only.
+- **Max limit** - allows you to set the maximum number of annotations to display between 100 to 2,000.
+
+<Image
+  title="Options to select the annotation type and set the display limit."
+  src="/img/plugins/business-calendar/annotations.png"
+/>
+
+## Business Satellite
+
+The [Business Satellite](/plugins/business-satellite/annotations/) data source can be used as an alternative to display annotations.

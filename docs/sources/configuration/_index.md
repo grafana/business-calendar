@@ -1,0 +1,34 @@
+---
+tags:
+  - Business Calendar
+image: /img/plugins/business-calendar/options.png
+title: 'Configuration'
+description: 'Learn about Configuration in Grafana'
+labels:
+  products:
+    - enterprise
+    - oss
+weight: 30
+---
+import Image from "@theme/Image";
+
+# Configuration
+
+The Business Calendar has the following categories for configuration where **Business Calendar**, **Layout**, **Events**, **Data**, and **Annotations** are specific to the plugin and the rest are common for all Grafana plugins.
+
+<Image
+  title="The Business Calendar plugin categories."
+  src="/img/plugins/business-calendar/options.png"
+  width="50%"
+/>
+
+| Category                       | Description                                             |
+| ------------------------------ | ------------------------------------------------------- |
+| [Business Calendar](../main/)  | Describes the Business Calendar category options.       |
+| [Layout](../layout/)           | Describes the Layout category options.                  |
+| [Events](../events/)           | Describes the Events category options.                  |
+| [Annotations](../annotations/) | Explains how to display and filter Grafana annotations. |
+
+## Native categories
+
+The Business Calendar panel supports standard options, data links, value mappings, thresholds, and overrides.
