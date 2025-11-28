@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/bus-calendar-section.png
-title: 'Business Calendar'
-description: 'Learn about the Business Calendar category configuration options including scroll settings and date formats.'
+title: Business Calendar
+description: Learn about the Business Calendar category configuration options including scroll settings and date formats.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 100
 ---
-
 # Business Calendar
 
 The **Business Calendar** category consists of two parameters at the moment:

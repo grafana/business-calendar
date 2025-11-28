@@ -1,17 +1,13 @@
 ---
-tags:
-  - Business Calendar
-  - Annotations
-image: /img/plugins/business-calendar/annotations.png
-title: 'Annotations'
-description: 'Learn how to display and filter Grafana annotations in the Business Calendar panel.'
+title: Annotations
+description: Learn how to display and filter Grafana annotations in the Business Calendar panel.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 400
 ---
-
 # Annotations
 
 The Business Calendar panel plugin allows displaying and filtering Grafana annotations.

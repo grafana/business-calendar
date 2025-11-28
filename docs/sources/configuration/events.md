@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/schema.png
-title: 'Events'
-description: 'Learn how to configure event click actions, links, and detail drawers in the Business Calendar panel.'
+title: Events
+description: Learn how to configure event click actions, links, and detail drawers in the Business Calendar panel.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 300
 ---
-
 # Events
 
 The first parameter of the **Events** category is **On click**:

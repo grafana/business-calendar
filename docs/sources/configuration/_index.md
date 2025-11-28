@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/options.png
-title: 'Configuration'
-description: 'Learn about the configuration categories available in the Business Calendar plugin.'
+title: Configuration
+description: Learn about the configuration categories available in the Business Calendar plugin.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 30
 ---
-
 # Configuration
 
 The Business Calendar has the following categories for configuration where **Business Calendar**, **Layout**, **Events**, **Data**, and **Annotations** are specific to the plugin and the rest are common for all Grafana plugins.

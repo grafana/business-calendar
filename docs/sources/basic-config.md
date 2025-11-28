@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/schema.png
-title: 'Basic configuration'
-description: 'Learn how to configure the Business Calendar panel to load and display events from any data source.'
+title: Basic configuration
+description: Learn how to configure the Business Calendar panel to load and display events from any data source.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 20
 ---
-
 # Basic configuration
 
 The Business Calendar panel allows you to load events from any data source and display them on your Grafana dashboard.

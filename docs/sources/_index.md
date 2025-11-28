@@ -1,17 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/dashboard.png
-hide_table_of_contents: true
-title: 'Business Calendar'
-description: 'Learn how to display events in a stylish calendar format using the Business Calendar panel plugin.'
+title: Business Calendar
+description: Learn how to display events in a stylish calendar format using the Business Calendar panel plugin.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 10
 ---
-
 # Business Calendar
 
 The Business Calendar panel is a Grafana plugin that displays events in a stylish calendar format. The data can come from various data sources.

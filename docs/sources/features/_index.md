@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/dashboard.png
-title: 'Features'
-description: 'Learn about the features available in the Business Calendar panel.'
+title: Features
+description: Learn about the features available in the Business Calendar panel.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 40
 ---
-
 # Features
 
 The Business Calendar has the following features.

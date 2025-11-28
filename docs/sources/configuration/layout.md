@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/layout.png
-title: 'Layout'
-description: 'Learn about the layout configuration options available in the Business Calendar panel.'
+title: Layout
+description: Learn about the layout configuration options available in the Business Calendar panel.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 200
 ---
-
 # Layout
 
 The **Layout** category consists of the following parameters at the moment:

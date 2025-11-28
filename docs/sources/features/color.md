@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/colors.png
-title: 'Coloring Events'
-description: 'Learn how to use colors to improve the visual perception of calendar events.'
+title: Coloring Events
+description: Learn how to use colors to improve the visual perception of calendar events.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 300
 ---
-
 # Coloring Events
 
 You may color events using the Business Calendar plugin to improve the visual perception of the calendar layout. Colors can be used to represent distinct event types, different priorities, and so on.

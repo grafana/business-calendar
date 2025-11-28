@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-image: /img/plugins/business-calendar/i18n.png
-title: 'Internationalization'
-description: 'Learn how the Business Calendar panel supports multiple languages based on your user profile settings.'
+title: Internationalization
+description: Learn how the Business Calendar panel supports multiple languages based on your user profile settings.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 100
 ---
-
 # Internationalization
 
 The language you specify in the user profile menu will be used throughout the Business Calendar panel on the dashboard as well as in the edit mode for panel options.

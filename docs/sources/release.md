@@ -1,18 +1,13 @@
 ---
-tags:
-  - Business Calendar
-  - Release Notes
-image: /img/suite.png
-hide_table_of_contents: true
-title: 'Release Notes'
-description: 'Learn about updates, new features, enhancements, and fixes for the Business Calendar panel.'
+title: Release Notes
+description: Learn about updates, new features, enhancements, and fixes for the Business Calendar panel.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 60
 ---
-
 # Release Notes
 
 Stay informed about the Business Calendar panel’s updates with these release notes, summarizing new features, enhancements, and fixes across all versions.

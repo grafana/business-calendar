@@ -1,16 +1,13 @@
 ---
-tags:
-  - Business Calendar
-hide_table_of_contents: true
-title: 'Tutorials'
-description: 'Learn how to use the Business Calendar plugin through step-by-step video tutorials.'
+title: Tutorials
+description: Learn how to use the Business Calendar plugin through step-by-step video tutorials.
 labels:
   products:
     - enterprise
     - oss
+    - cloud
 weight: 50
 ---
-
 # Tutorials
 
 This page contains clear, step-by-step video tutorials that showcase new features and tackle the most common challenges users face. The goal is to make your experience with Business Suite as seamless and productive as possible.
