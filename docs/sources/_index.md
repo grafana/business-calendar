@@ -12,7 +12,7 @@ weight: 10
 
 The Business Calendar panel is a Grafana plugin that displays events in a stylish calendar format. The data can come from various data sources.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-forms/dashboard.png" class="border" alt="The Business Calendar plugin displays events from Grafana plugins catalog in April 2024." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/dashboard.png" class="border" alt="The Business Calendar plugin displays events from Grafana plugins catalog in April 2024." >}}
 
 ## Requirements
 
