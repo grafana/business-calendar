@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/plugins/business-calendar/dashboard.png
 title: 'Features'
-description: 'Learn about Features in Grafana'
+description: 'Learn about the features available in the Business Calendar panel.'
 labels:
   products:
     - enterprise

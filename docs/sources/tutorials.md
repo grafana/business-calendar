@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 hide_table_of_contents: true
 title: 'Tutorials'
-description: 'Learn about Business Calendar Tutorials in Grafana'
+description: 'Learn how to use the Business Calendar plugin through step-by-step video tutorials.'
 labels:
   products:
     - enterprise

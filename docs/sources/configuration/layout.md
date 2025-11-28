@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/plugins/business-calendar/layout.png
 title: 'Layout'
-description: 'Learn about Layout in Grafana'
+description: 'Learn about the layout configuration options available in the Business Calendar panel.'
 labels:
   products:
     - enterprise

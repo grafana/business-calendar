@@ -4,7 +4,7 @@ tags:
 image: /img/plugins/business-calendar/dashboard.png
 hide_table_of_contents: true
 title: 'Business Calendar'
-description: 'Learn about Business Calendar in Grafana'
+description: 'Learn how to display events in a stylish calendar format using the Business Calendar panel plugin.'
 labels:
   products:
     - enterprise

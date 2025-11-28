@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/plugins/business-calendar/bus-calendar-section.png
 title: 'Business Calendar'
-description: 'Learn about Business Calendar in Grafana'
+description: 'Learn about the Business Calendar category configuration options including scroll settings and date formats.'
 labels:
   products:
     - enterprise

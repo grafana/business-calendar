@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/blog/2023-10-06-calendar-panel-2.2.0/timezone.png
 title: 'Dashboard Time Zones'
-description: 'Learn about Dashboard Time Zones in Grafana'
+description: 'Learn how the Business Calendar panel supports dashboard time zones.'
 labels:
   products:
     - enterprise

@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/plugins/business-calendar/options.png
 title: 'Configuration'
-description: 'Learn about Configuration in Grafana'
+description: 'Learn about the configuration categories available in the Business Calendar plugin.'
 labels:
   products:
     - enterprise

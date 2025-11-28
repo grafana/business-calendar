@@ -5,7 +5,7 @@ tags:
 image: /img/suite.png
 hide_table_of_contents: true
 title: 'Release Notes'
-description: 'Learn about Release Notes in Grafana'
+description: 'Learn about updates, new features, enhancements, and fixes for the Business Calendar panel.'
 labels:
   products:
     - enterprise

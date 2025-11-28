@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/plugins/business-calendar/schema.png
 title: 'Events'
-description: 'Learn about Events in Grafana'
+description: 'Learn how to configure event click actions, links, and detail drawers in the Business Calendar panel.'
 labels:
   products:
     - enterprise

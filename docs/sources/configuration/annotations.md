@@ -4,7 +4,7 @@ tags:
   - Annotations
 image: /img/plugins/business-calendar/annotations.png
 title: 'Annotations'
-description: 'Learn about Annotations in Grafana'
+description: 'Learn how to display and filter Grafana annotations in the Business Calendar panel.'
 labels:
   products:
     - enterprise

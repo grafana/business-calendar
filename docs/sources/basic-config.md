@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/plugins/business-calendar/schema.png
 title: 'Basic configuration'
-description: 'Learn about Basic configuration in Grafana'
+description: 'Learn how to configure the Business Calendar panel to load and display events from any data source.'
 labels:
   products:
     - enterprise

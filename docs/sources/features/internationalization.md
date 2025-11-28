@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/plugins/business-calendar/i18n.png
 title: 'Internationalization'
-description: 'Learn about Internationalization in Grafana'
+description: 'Learn how the Business Calendar panel supports multiple languages based on your user profile settings.'
 labels:
   products:
     - enterprise

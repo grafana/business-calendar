@@ -3,7 +3,7 @@ tags:
   - Business Calendar
 image: /img/plugins/business-calendar/colors.png
 title: 'Coloring Events'
-description: 'Learn about Coloring Events in Grafana'
+description: 'Learn how to use colors to improve the visual perception of calendar events.'
 labels:
   products:
     - enterprise
