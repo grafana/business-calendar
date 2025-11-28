@@ -11,7 +11,7 @@ weight: 10
 
 # Business Calendar
 
-The Business Calendar panel is a Grafana plugin that displays events in a stylish calendar format. The data can come from various data sources.
+The Business Calendar panel is a Grafana plugin that displays events in a stylish calendar format. You can use data from various data sources.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/dashboard.png" class="border" alt="The Business Calendar plugin displays events from Grafana plugins catalog in April 2024." >}}
 
@@ -40,16 +40,16 @@ grafana cli plugins install marcusolsson-calendar-panel
   - Switch between the **Day**, **Week**, **Month**, **Work Week**, **Year**, and **Agenda** views.
   - Switch back to today's events.
   - Display events from the previous and subsequent time ranges.
-- Fetch and combine event data from any data sources.
-- Event filter by a time range.
-- Event coloring based on the Grafana Thresholds.
-- Enables the opening of a data link instead of a sidebar when clicking on an event.
-- Enables the display of annotations across all dashboards for the specified period.
-- Supports Internationalization: Spanish, French, German, Portuguese, and Chinese.
+- Fetch and combine event data from any data source.
+- Filter events by a time range.
+- Color events based on Grafana Thresholds.
+- Open a data link instead of a sidebar when you click an event.
+- Display annotations across all dashboards for the specified period.
+- Support for internationalization: Spanish, French, German, Portuguese, and Chinese.
 
 ## Tutorial
 
-This video is a detailed review of all configurable options. To ensure you can follow, the video starts with fetching publicly available Grafana plugin catalog data and then demonstrates how the Business Calendar plugin options change the panel appearance and behavior.
+This video provides a detailed review of all configurable options. The video starts with fetching publicly available Grafana plugin catalog data and then demonstrates how the Business Calendar plugin options change the panel appearance and behavior.
 
 {{< youtube id="CvLqyY2fQfo" >}}
 
@@ -63,7 +63,7 @@ For all other tutorials related to this plugin, refer to [Tutorials](/plugins/bu
 | [Configuration](sections)           | Describes configuration options                                |
 | [Features](features)                | Describes plugin's features                                    |
 | [Tutorials](tutorials)              | Easy to follow tutorials                                       |
-| [Release Notes](release)            | Allows to stay up to date with the latest features and updates |
+| [Release Notes](release)            | Stay up to date with the latest features and updates |
 
 ## License
 

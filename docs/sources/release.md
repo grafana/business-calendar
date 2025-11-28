@@ -9,8 +9,8 @@ labels:
 weight: 60
 ---
 
-# Release notes
+# Release Notes
 
 Stay informed about the Business Calendar panel’s updates with these release notes, summarizing new features, enhancements, and fixes across all versions.
 
-All notable changes to the Business Media panel are documented in the [changelog](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/?tab=changelog) found in the plugins catalog.
+All notable changes to the Business Calendar panel are documented in the [changelog](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/?tab=changelog) in the plugins catalog.

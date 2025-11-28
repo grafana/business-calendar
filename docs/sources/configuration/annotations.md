@@ -11,15 +11,12 @@ weight: 400
 
 # Annotations
 
-The Business Calendar panel plugin allows displaying and filtering Grafana annotations.
+The Business Calendar panel plugin allows you to display and filter Grafana annotations.
 
 You can adjust the display settings as follows:
 
-- **Type** - allows you to display:
-  - both alerts and annotations,
-  - alerts only,
-  - annotations only.
-- **Max limit** - allows you to set the maximum number of annotations to display between 100 to 2,000.
+- **Type**: Display both alerts and annotations, alerts only, or annotations only.
+- **Max limit**: Set the maximum number of annotations to display, from 100 to 2,000.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/annotations.png" max-width="65%" class="border" alt="Options to select the annotation type and set the display limit." >}}
 

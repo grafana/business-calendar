@@ -11,7 +11,7 @@ weight: 200
 
 # Layout
 
-The **Layout** category consists of the following parameters at the moment:
+The **Layout** category includes the following parameters:
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/layout.png" max-width="50%" class="border" alt="The Layout category." >}}
 
@@ -31,7 +31,7 @@ Displays a week with 7 or 5 days respectively.
 
 #### First day of the week
 
-The plugin considers the Grafana system settings when choosing the first day of the week - Saturday, Sunday, or Monday, or uses the default day from Grafana settings.
+The plugin uses the Grafana system settings to determine the first day of the week: Saturday, Sunday, or Monday. If no setting is specified, the plugin uses the default day from Grafana settings.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/week-start-pref.png" class="border" alt="Grafana start week setting." >}}
 
@@ -50,12 +50,12 @@ Displays 12 months at the same time. The purpose of this view is to help navigat
 #### Events
 
 {{< admonition type="note" >}}
-Starting from version 3.8.0, the Business Calendar panel displays dots representing events for that day.
+Starting from version 3.8.0, the Business Calendar panel displays dots representing events for each day.
 {{< /admonition >}}
 
-In the **Year** view, the Business Calendar panel displays dots representing events that day. If there are more than 3 events, the plus symbol is shown.
+In the **Year** view, the Business Calendar panel displays dots representing events for each day. If there are more than three events, a plus symbol appears.
 
-The multi-day events are displayed as one dot per day. For instance, if an event lasts from September 16 to September 17 (two day event), two dots are shown on the panel, one dot for September 16 and the other dot for September 17.
+Multi-day events display as one dot per day. For instance, if an event lasts from September 16 to September 17 (a two-day event), two dots appear on the panel: one dot for September 16 and another dot for September 17.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/year.png" class="border" alt="Displaying events in a day on the Year view." >}}
 
@@ -67,34 +67,34 @@ Displays only the busy time slots and shows multiple days for the selected perio
 
 ## Available views
 
-You can configure which view(s) will be available for an end-user.
+You can configure which views are available for users.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/allowed.png" class="border" alt="An end user can only select from the allowed options. In this example, Week, Month, and Year are allowed." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/allowed.png" class="border" alt="Users can only select from the allowed options. In this example, Week, Month, and Year are allowed." >}}
 
 ## Default view
 
-With this setting, you can control what your calendar will look like after a page refresh. Any of the calendar views can be selected as a default view.
+Use this setting to control what your calendar displays after a page refresh. You can select any of the calendar views as the default view.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/default-view.png" max-width="70%" class="border" alt="The Default View option." >}}
 
 ## Date and time format
 
-As you know, there is a Language setting in the user profile preference. Along with language this setting also impacts the displayed date formats.
+The Language setting in the user profile preference affects both the language and the displayed date formats.
 
 {{< admonition type="note" >}}
-The extended date formats are supported starting from version 3.0.0.
+Extended date formats are available starting from version 3.0.0.
 {{< /admonition >}}
 
 The existing choices weren't sufficient for all use cases, so the **English 24** and **ISO 8601** formats were added.
 
-If the **Date and time format** is set to **User selection**, the language preference is taken from the User profile > Preferences >Language.
+If you set **Date and time format** to **User selection**, the language preference is taken from **User profile > Preferences > Language**.
 
 All other options override the user profile settings.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/language-extended.png" class="border" alt="Use the Date and time format option to overwrite the user language setting." >}}
 
 {{< admonition type="note" >}}
-The panel specific language(datetime) format is supported starting from version 3.8.0
+Panel-specific language (datetime) format is available starting from version 3.8.0.
 {{< /admonition >}}
 
 The **Date and time format** parameter is specific to the particular Business Calendar panel.
@@ -104,10 +104,10 @@ The **Date and time format** parameter is specific to the particular Business Ca
 ## Month time
 
 {{< admonition type="note" >}}
-Disable event time feature is supported starting from version 3.5.0.
+Disabling event time is available starting from version 3.5.0.
 {{< /admonition >}}
 
-For the **Month** layout, you can turn off the displaying of the event times.
+For the **Month** layout, you can turn off the display of event times.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/month-time.png" class="border" alt="You can hide event time for the Month layout." >}}
 

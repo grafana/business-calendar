@@ -11,7 +11,7 @@ weight: 30
 
 # Configuration
 
-The Business Calendar has the following categories for configuration where **Business Calendar**, **Layout**, **Events**, **Data**, and **Annotations** are specific to the plugin and the rest are common for all Grafana plugins.
+The Business Calendar has the following configuration categories: **Business Calendar**, **Layout**, **Events**, **Data**, and **Annotations**, which are specific to the plugin. The remaining categories are common to all Grafana plugins.
 
 {{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/options.png" max-width="50%" class="border" alt="The Business Calendar plugin categories." >}}
 

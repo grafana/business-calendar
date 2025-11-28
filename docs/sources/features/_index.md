@@ -11,10 +11,10 @@ weight: 40
 
 # Features
 
-The Business Calendar has the following features.
+The Business Calendar includes the following features.
 
-| Section                                         | Description                                                               |
-| ----------------------------------------------- | ------------------------------------------------------------------------- |
-| [Internationalization](../internationalization) | Explains internationalization                                             |
-| [Dashboard Time Zones](../dashboard-timezones)  | How to set up the plugin time zone                                        |
-| [Coloring Events](../color)                     | How to use colors to improve the visual perception of the calendar layout |
+| Section                                         | Description                                                    |
+| ----------------------------------------------- | -------------------------------------------------------------- |
+| [Internationalization](../internationalization) | Internationalization support                                   |
+| [Dashboard Time Zones](../dashboard-timezones)  | Set up the plugin time zone                                    |
+| [Coloring Events](../color)                     | Use colors to improve the visual perception of calendar layout |
