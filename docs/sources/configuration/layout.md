@@ -12,7 +12,7 @@ weight: 200
 
 The **Layout** category consists of the following parameters at the moment:
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/layout.png" class="border" alt="The Layout category." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/layout.png" max-width="50%" class="border" alt="The Layout category." >}}
 
 ## Views
 
@@ -74,7 +74,7 @@ You can configure which view(s) will be available for an end-user.
 
 With this setting, you can control what your calendar will look like after a page refresh. Any of the calendar views can be selected as a default view.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/default-view.png" class="border" alt="The Default View option." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/default-view.png" max-width="70%" class="border" alt="The Default View option." >}}
 
 ## Date and time format
 

@@ -33,7 +33,7 @@ A drawer is a pop-up window that opens on the right-hand side of your browser an
 
 You can configure which data elements to show in the drawer by selecting them in the **Details info** parameter (see the first image on this page).
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/drawer-dissect.png" class="border" alt="A drawer dissection." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/drawer-dissect.png" max-width="75%" class="border" alt="A drawer dissection." >}}
 
 ## Tooltip
 

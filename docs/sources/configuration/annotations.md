@@ -20,7 +20,7 @@ You can adjust the display settings as follows:
   - annotations only.
 - **Max limit** - allows you to set the maximum number of annotations to display between 100 to 2,000.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/annotations.png" class="border" alt="Options to select the annotation type and set the display limit." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/annotations.png" max-width="65%" class="border" alt="Options to select the annotation type and set the display limit." >}}
 
 ## Business Satellite
 

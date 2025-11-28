@@ -12,7 +12,7 @@ weight: 100
 
 The **Business Calendar** category consists of two parameters at the moment:
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/bus-calendar-section.png" class="border" alt="The Business Calendar category." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/bus-calendar-section.png" max-width="40%" class="border" alt="The Business Calendar category." >}}
 
 ## Scroll to Time
 

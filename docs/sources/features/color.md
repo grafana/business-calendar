@@ -18,7 +18,7 @@ You can color events based on the following **Layout**:
 - **Event**,
 - **Thresholds**.
 
-{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/colors-by.png" class="border" alt="Color event base on one of these three options." >}}
+{{< figure src="/media/docs/grafana/panels-visualizations/business-calendar/colors-by.png" max-width="60%" class="border" alt="Color event base on one of these three options." >}}
 
 ## Frame
 
