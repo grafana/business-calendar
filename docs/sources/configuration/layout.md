@@ -62,10 +62,7 @@ The multi-day events are displayed as one dot per day. For instance, if an event
 
 Displays only the busy time slots and shows multiple days for the selected period.
 
-<Image
-  title="The Agenda layout."
-  src="/img/plugins/business-calendar/agenda.gif"
-/>
+{{< video-embed src="/media/docs/grafana/panels-visualizations/business-calendar/agenda.mp4" >}}
 
 ## Available views
 
