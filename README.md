@@ -47,11 +47,11 @@ Explore comprehensive guides and resources to master the plugin:
 
 | Section                                                                              | Description                                      |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| [Basic Configuration](https://volkovlabs.io/plugins/business-calendar/basic-config/) | Learn the essentials to get started.             |
-| [Configuration Options](https://volkovlabs.io/plugins/business-calendar/sections/)   | Dive into all customization settings.            |
-| [Features](https://volkovlabs.io/plugins/business-calendar/features/)                | Discover key capabilities and use cases.         |
-| [Tutorials](https://volkovlabs.io/plugins/business-calendar/tutorials/)              | Follow step-by-step guides for practical setups. |
-| [Release Notes](https://volkovlabs.io/plugins/business-calendar/release/)            | Stay updated on new features and fixes.          |
+| [Basic configuration](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/basic-config/) | Learn the essentials to get started.             |
+| [Configuration options](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/configuration/)   | Dive into all customization settings.            |
+| [Features](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/features/)                | Discover key capabilities and use cases.         |
+| [Tutorials](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/tutorials/)              | Follow step-by-step guides for practical setups. |
+| [Release notes](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/release/)            | Stay updated on new features and fixes.          |
 
 
 ## 📜 License

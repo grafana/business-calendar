@@ -12,7 +12,12 @@
     },
     "description": "Displays events in a sleek calendar view, pulling from diverse data sources for seamless integration",
     "keywords": ["panel", "calendar"],
-    "links": [],
+    "links": [
+      {
+        "name": "Documentation",
+        "url": "https://grafana.com/docs/plugins/marcusolsson-calendar-panel/"
+      }
+    ],
     "logos": {
       "large": "img/logo.svg",
       "small": "img/logo.svg"
