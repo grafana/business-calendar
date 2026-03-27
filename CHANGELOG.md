@@ -1,8 +1,26 @@
+<!-- markdownlint-disable MD013 MD024 -->
+
 # Changelog
 
 All notable changes to the **Business Calendar Panel** plugin for Grafana are documented in this file.
 
 This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Changed
+
+- Bumped Node version requirement to 24.
+- Updated plugin build tooling (`.config/` from `@grafana/create-plugin` v7.0.8).
+- Added missing webpack dependencies (`imports-loader`, `webpack-subresource-integrity`, `webpack-virtual-modules`).
+- Updated dependencies within semver ranges (Grafana 12.4.2, webpack 5.105.4, i18next 25.10.10, sass 1.98.0, etc.).
+- Removed unused dependencies (`@stylistic/eslint-plugin`, `tsconfig-paths`).
+- Simplified `docker-compose.yaml` to extend base config.
+
+### Added
+
+- Added `cspell.config.json` for spell checking with missing words.
+- Added `AGENTS.md` with build/test commands, code style guidelines, naming conventions, testing conventions, ESLint rules, changelog policy, and branching policy.
 
 ## [4.2.0] - 2025-10-23
 
