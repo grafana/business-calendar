@@ -202,6 +202,8 @@ before pushing.
   changes.
 - **Do not commit automatically**. Only commit when explicitly asked.
 - **Do not push automatically**. Only push when explicitly asked.
+- **Always create pull requests as drafts**
+  (`gh pr create --draft`).
 
 ## Testing Conventions
 
