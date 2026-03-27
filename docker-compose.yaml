@@ -5,48 +5,27 @@ services:
       service: grafana
     ports:
       - 3000:3000/tcp
+    environment:
+      - GF_DEFAULT_APP_MODE=development
+      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/panels.json
+      - GF_PLUGINS_PREINSTALL=marcusolsson-json-datasource,marcusolsson-static-datasource
+      - GF_USERS_DEFAULT_THEME=light
+    volumes:
+      - ./dist:/var/lib/grafana/plugins/volkovlabs-calendar-panel
+      - ./provisioning:/etc/grafana/provisioning
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3000/api/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
 
   grafana-dev:
     image: ghcr.io/volkovlabs/app:latest
     ports:
       - 3000:3000/tcp
-    environment:
-      - GF_DEFAULT_APP_MODE=development
-      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/etc/grafana/provisioning/dashboards/panels.json
-      - GF_INSTALL_PLUGINS=marcusolsson-json-datasource,marcusolsson-static-datasource
-    volumes:
-      - ./dist:/var/lib/grafana/plugins/volkovlabs-calendar-panel
-      - ./provisioning:/etc/grafana/provisioning
     profiles:
       - dev
-
-  grafana-main:
-    image: grafana/grafana:main
-    ports:
-      - 3000:3000/tcp
-    environment:
-      - GF_DEFAULT_APP_MODE=development
-      - GF_USERS_DEFAULT_THEME=light
-      - GF_INSTALL_PLUGINS=marcusolsson-json-datasource,marcusolsson-static-datasource
-    volumes:
-      - ./dist:/var/lib/grafana/plugins/volkovlabs-calendar-panel
-      - ./provisioning:/etc/grafana/provisioning
-    profiles:
-      - main
-
-  grafana-dep:
-    image: grafana/grafana:11.0.0
-    ports:
-      - 3000:3000/tcp
-    environment:
-      - GF_DEFAULT_APP_MODE=development
-      - GF_USERS_DEFAULT_THEME=light
-      - GF_INSTALL_PLUGINS=marcusolsson-json-datasource,marcusolsson-static-datasource
-    volumes:
-      - ./dist:/var/lib/grafana/plugins/volkovlabs-calendar-panel
-      - ./provisioning:/etc/grafana/provisioning
-    profiles:
-      - dependency
 
   playwright:
     build:
@@ -61,5 +40,4 @@ services:
       grafana:
         condition: service_healthy
     profiles:
-      - e2e
       - playwright

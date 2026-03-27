@@ -1,20 +1,26 @@
 {
-  "author": "Grafana Labs",
-  "dependencies": {
-    "@emotion/css": "^11.13.0",
-    "@grafana/data": "^12.1.0",
-    "@grafana/runtime": "^12.1.0",
-    "@grafana/ui": "^12.1.0",
-    "@volkovlabs/components": "^4.5.0",
-    "dayjs": "^1.11.13",
-    "i18next": "^25.3.2",
-    "react": "18.3.1",
-    "react-big-calendar": "^1.19.4",
-    "react-dom": "18.3.1",
-    "react-i18next": "^15.6.1",
-    "tslib": "^2.8.0"
-  },
+  "name": "business-panel",
   "description": "Displays events in a sleek calendar view, pulling from diverse data sources for seamless integration",
+  "version": "4.2.1",
+  "scripts": {
+    "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
+    "dev": "webpack -w -c ./.config/webpack/webpack.config.ts --env development",
+    "levitate": "npx @grafana/levitate@latest is-compatible --path src/module.ts --target @grafana/data,@grafana/runtime,@grafana/ui",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "sign": "npx --yes @grafana/sign-plugin@latest",
+    "start": "docker compose pull grafana && docker compose up",
+    "stop": "docker compose down",
+    "test": "jest --watch --onlyChanged",
+    "test:ci": "jest --maxWorkers 4 --coverage",
+    "test:e2e": "npx playwright test",
+    "test:e2e:dev": "npx playwright test --ui",
+    "test:e2e:docker": "docker compose --profile playwright up --exit-code-from test",
+    "typecheck": "tsc --noEmit",
+    "upgrade": "npm upgrade --save"
+  },
+  "author": "Grafana Labs",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@grafana/eslint-config": "^8.1.0",
     "@grafana/plugin-e2e": "^2.1.7",
@@ -57,28 +63,20 @@
     "webpack-livereload-plugin": "^3.0.2"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
-  "license": "Apache-2.0",
-  "name": "business-panel",
-  "scripts": {
-    "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
-    "dev": "webpack -w -c ./.config/webpack/webpack.config.ts --env development",
-    "levitate": "npx @grafana/levitate@latest is-compatible --path src/module.ts --target @grafana/data,@grafana/runtime,@grafana/ui",
-    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-    "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
-    "sign": "npx --yes @grafana/sign-plugin@latest",
-    "start": "docker compose pull grafana && docker compose --profile dev up",
-    "start:dep": "docker compose pull grafana-dep && docker compose --profile dependency up",
-    "start:main": "docker compose pull grafana-main && docker compose --profile main up",
-    "stop": "docker compose down",
-    "test": "jest --watch --onlyChanged",
-    "test:ci": "jest --maxWorkers 4 --coverage",
-    "test:e2e": "npx playwright test",
-    "test:e2e:dev": "npx playwright test --ui",
-    "test:e2e:docker": "docker compose --profile e2e up --exit-code-from test",
-    "typecheck": "tsc --noEmit",
-    "upgrade": "npm upgrade --save"
-  },
-  "version": "4.2.1"
+  "dependencies": {
+    "@emotion/css": "^11.13.0",
+    "@grafana/data": "^12.1.0",
+    "@grafana/runtime": "^12.1.0",
+    "@grafana/ui": "^12.1.0",
+    "@volkovlabs/components": "^4.5.0",
+    "dayjs": "^1.11.13",
+    "i18next": "^25.3.2",
+    "react": "18.3.1",
+    "react-big-calendar": "^1.19.4",
+    "react-dom": "18.3.1",
+    "react-i18next": "^15.6.1",
+    "tslib": "^2.8.0"
+  }
 }
