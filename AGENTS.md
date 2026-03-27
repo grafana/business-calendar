@@ -76,6 +76,11 @@ Every directory has a barrel `index.ts`.
   file you create or modify (including `AGENTS.md`,
   `README.md`, `CHANGELOG.md`) and fix all reported
   issues before committing.
+- **Always run cspell** after making changes:
+  `npx cspell@6.13.3 -c cspell.config.json
+"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
+  and fix any issues before committing. Add new words
+  to `cspell.config.json` if they are legitimate.
 - **Prefer subagents** for research, code exploration,
   and multi-step work. Use the Task tool with
   `explore` or `general` agents rather than running
