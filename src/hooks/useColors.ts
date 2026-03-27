@@ -1,4 +1,4 @@
-import { classicColors, FieldColorModeId, FieldConfigSource, getFieldColorMode } from '@grafana/data';
+import { FieldColorModeId, FieldConfigSource, getFieldColorMode } from '@grafana/data';
 import { useTheme2 } from '@grafana/ui';
 import { useMemo } from 'react';
 
@@ -10,7 +10,7 @@ export const useColors = (fieldConfig?: FieldConfigSource) => {
   const theme = useTheme2();
 
   return useMemo(() => {
-    let colors = classicColors;
+    let colors = theme.visualization.palette;
     if (fieldConfig?.defaults.color) {
       const mode = getFieldColorMode(fieldConfig.defaults.color.mode);
       if (mode && mode.getColors) {
