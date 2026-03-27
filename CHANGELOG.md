@@ -16,6 +16,14 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Updated dependencies within semver ranges (Grafana 12.4.2, webpack 5.105.4, i18next 25.10.10, sass 1.98.0, etc.).
 - Removed unused dependencies (`@stylistic/eslint-plugin`, `tsconfig-paths`).
 - Simplified `docker-compose.yaml` to extend base config.
+- Pinned CI/CD workflows to `ci-cd-workflows/v7` instead of `@main`.
+
+### Fixed
+
+- Fixed ESLint flat config compatibility with `eslint-plugin-react-hooks@7` legacy plugins format.
+- Added `aria-label` to icon-only toolbar buttons for `@grafana/ui` 12.4.2 compatibility.
+- Replaced deprecated `classicColors` with `theme.visualization.palette`.
+- Typed `Drawer` mock props to fix `no-explicit-any` lint warning.
 
 ### Added
 
