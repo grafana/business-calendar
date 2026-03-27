@@ -17,6 +17,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Removed unused dependencies (`@stylistic/eslint-plugin`, `tsconfig-paths`).
 - Simplified `docker-compose.yaml` to extend base config.
 - Pinned CI/CD workflows to `ci-cd-workflows/v7` instead of `@main`.
+- Pinned Playwright Docker image to `v1.58.2-noble`.
+- Bumped minimum supported Grafana version to 12.0.0.
 
 ### Fixed
 
