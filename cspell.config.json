@@ -17,15 +17,20 @@
     "src/i18n/translations/**"
   ],
   "words": [
+    "datasource",
+    "doesn",
     "dont",
+    "evenodd",
     "flexbox",
     "marcusolsson",
-    "volkovlabs",
-    "Volkov",
-    "evenodd",
     "PXJF",
     "SSSSSSSZ",
+    "testid",
+    "Texbox",
+    "timeslot",
+    "typecheck",
     "UGRQBB",
-    "Texbox"
+    "Volkov",
+    "volkovlabs"
   ]
 }
