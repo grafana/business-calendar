@@ -35,8 +35,6 @@ npm run test:e2e:dev           # Playwright interactive UI
 ```
 
 Jest sets `TZ=UTC` globally.
-Tests use `@testing-library/react`,
-`@volkovlabs/jest-selectors`, and jsdom.
 
 ## Project Structure
 
@@ -57,11 +55,10 @@ src/
   utils/                 # Pure utility functions
   i18n/                  # Internationalization (6 languages)
   @types/                # Module augmentations (i18next.d.ts)
-.config/                 # Grafana scaffolded — DO NOT MODIFY
+.config/                 # Grafana scaffolded build config
 ```
 
-Every directory has a barrel `index.ts`
-using `export * from './Module'`.
+Every directory has a barrel `index.ts`.
 
 ## Critical Rules
 
@@ -79,6 +76,11 @@ using `export * from './Module'`.
   file you create or modify (including `AGENTS.md`,
   `README.md`, `CHANGELOG.md`) and fix all reported
   issues before committing.
+- **Prefer subagents** for research, code exploration,
+  and multi-step work. Use the Task tool with
+  `explore` or `general` agents rather than running
+  many search/read commands directly. Launch multiple
+  agents in parallel when tasks are independent.
 
 ## Code Style
 
@@ -172,6 +174,34 @@ Destructured members sorted alphabetically within braces.
   for safe property access.
 - Filter falsy values:
   `.filter((x) => x)` or `.filter(Boolean)`.
+
+## ESLint
+
+Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`, `@volkovlabs/eslint-config`, and `eslint-config-prettier`. Custom rule: `@typescript-eslint/no-empty-object-type: off`. Test files, mocks, config files, and server dirs are excluded from linting.
+
+### Additional Rules
+
+- `no-console` and `no-debugger` are errors
+- `@typescript-eslint/no-deprecated` is a warning — avoid
+  using deprecated APIs
+- Unused variables are errors (except rest siblings)
+
+## Changelog Policy
+
+**Always update `CHANGELOG.md` when making changes.** Every commit that
+modifies code, documentation, dependencies, or configuration must have a
+corresponding entry in the changelog under the current unreleased version
+section. Add entries as part of the same commit or as a follow-up commit
+before pushing.
+
+## Branching Policy
+
+- **Never commit directly to `main`**. Always create a new branch for changes.
+- Use descriptive branch names (e.g., `feat/add-feature`, `fix/bug-description`).
+- When pushing new commits to a PR, always update the PR summary to reflect all
+  changes.
+- **Do not commit automatically**. Only commit when explicitly asked.
+- **Do not push automatically**. Only push when explicitly asked.
 
 ## Testing Conventions
 
