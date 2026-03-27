@@ -81,6 +81,10 @@ Every directory has a barrel `index.ts`.
 "**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
   and fix any issues before committing. Add new words
   to `cspell.config.json` if they are legitimate.
+- **NEVER commit unless the user explicitly asks.**
+  Do not commit as part of completing a task.
+- **NEVER push unless the user explicitly asks.**
+  Do not push as part of completing a task.
 - **Prefer subagents** for research, code exploration,
   and multi-step work. Use the Task tool with
   `explore` or `general` agents rather than running
@@ -205,8 +209,6 @@ before pushing.
 - Use descriptive branch names (e.g., `feat/add-feature`, `fix/bug-description`).
 - When pushing new commits to a PR, always update the PR summary to reflect all
   changes.
-- **Do not commit automatically**. Only commit when explicitly asked.
-- **Do not push automatically**. Only push when explicitly asked.
 - **Always create pull requests as drafts**
   (`gh pr create --draft`).
 
