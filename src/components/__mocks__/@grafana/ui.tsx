@@ -34,7 +34,15 @@ Card.Actions = CardActions;
  * since grafana.ui version 11.5.1
  * ReferenceError: IntersectionObserver is not defined
  */
-export const Drawer = ({ title, children, onClose }: any) => {
+export const Drawer = ({
+  title,
+  children,
+  onClose,
+}: {
+  title: ReactNode;
+  children: ReactNode;
+  onClose: () => void;
+}) => {
   return (
     <div>
       <button data-testid={selectors.components.Drawer.General.close} onClick={() => onClose()}>
