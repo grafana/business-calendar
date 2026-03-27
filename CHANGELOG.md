@@ -20,6 +20,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Pinned Playwright Docker image to `v1.58.2-noble`.
 - Bumped minimum supported Grafana version to 12.0.0.
 - Upgraded `@grafana/plugin-e2e` from 2.x to 3.4.10 for Grafana 12.4.2 E2E compatibility.
+- Skipped React 19 preview image in Playwright E2E tests (plugin uses React 18).
 
 ### Fixed
 
