@@ -2,6 +2,9 @@
 
 # AGENTS.md — Business Calendar (Grafana Plugin)
 
+> Grafana panel plugin providing a calendar view for time-series data.
+> Plugin ID: `marcusolsson-calendar-panel` | Owner: Grafana Labs
+
 ## Project Overview
 
 Grafana frontend panel plugin (`marcusolsson-calendar-panel`)
@@ -62,6 +65,10 @@ Every directory has a barrel `index.ts`.
 
 ## Critical Rules
 
+- **Do not use `volkovlabs.io` URLs** anywhere in the
+  codebase. This project was forked from Volkov Labs
+  and all references should point to Grafana equivalents
+  (e.g., `grafana.com`).
 - **Never modify anything inside `.config/`** —
   managed by Grafana plugin tooling.
 - **Never change `id` or `type`** in `src/plugin.json`.
@@ -72,19 +79,31 @@ Every directory has a barrel `index.ts`.
 - Use `@grafana/plugin-e2e` for E2E tests.
 - Grafana API docs:
   <https://grafana.com/developers/plugin-tools/llms.txt>
-- **Always run `npx markdownlint-cli`** on any `.md`
+- **Always run `npx markdownlint-cli2`** on any `.md`
   file you create or modify (including `AGENTS.md`,
   `README.md`, `CHANGELOG.md`) and fix all reported
   issues before committing.
-- **Always run cspell** after making changes:
-  `npx cspell@6.13.3 -c cspell.config.json
-"**/*.{ts,tsx,js,go,md,mdx,yml,yaml,json,scss,css}"`
-  and fix any issues before committing. Add new words
+- **Always run cspell before committing.** Run
+  `npx cspell -c cspell.config.json` on all
+  changed files and fix any issues. Add new words
   to `cspell.config.json` if they are legitimate.
+- **Always update `CHANGELOG.md` before committing.**
+  Every commit must include the corresponding changelog
+  entry. Do not commit code changes without first updating
+  the changelog in the same commit.
 - **NEVER commit unless the user explicitly asks.**
   Do not commit as part of completing a task.
 - **NEVER push unless the user explicitly asks.**
   Do not push as part of completing a task.
+  Never chain `git commit && git push` in one command.
+  Always wait for the user to explicitly ask to push.
+- **After pushing, always update the PR summary** if a
+  PR exists for the current branch. Treat push and PR
+  update as an atomic pair — never stop between them.
+  Use `gh pr edit` to update the title and body with
+  well-formatted text that reflects all changes across
+  the entire branch.
+- **Do not add a `Co-Authored-By` line** to commit messages.
 - **Prefer subagents** for research, code exploration,
   and multi-step work. Use the Task tool with
   `explore` or `general` agents rather than running
@@ -175,6 +194,43 @@ Destructured members sorted alphabetically within braces.
 - Translations live in `src/i18n/translations/`
   per language.
 
+### JSDoc Comments
+
+This codebase uses **pervasive JSDoc comments**. Add `/** ... */` blocks above:
+
+- Every interface and each of its properties (include `@type` tags on properties)
+- Every function and constant declaration
+- Logical sections within function bodies (state, theme, callbacks, return)
+
+```typescript
+/**
+ * Properties
+ */
+interface Props {
+  /**
+   * Events
+   *
+   * @type {CalendarEvent[]}
+   */
+  events: CalendarEvent[];
+}
+
+/**
+ * Calendar Panel
+ */
+export const CalendarPanel: React.FC<Props> = ({ events }) => {
+  /**
+   * Styles
+   */
+  const styles = useStyles2(getStyles);
+
+  /**
+   * Return
+   */
+  return <div className={styles.wrapper}>...</div>;
+};
+```
+
 ### Error Handling
 
 - Defensive guard patterns with early returns —
@@ -195,13 +251,32 @@ Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`, `@volkovlabs/
   using deprecated APIs
 - Unused variables are errors (except rest siblings)
 
+## Key Dependencies
+
+| Package                                            | Purpose                              |
+| -------------------------------------------------- | ------------------------------------ |
+| `react-big-calendar`                               | Calendar rendering engine            |
+| `dayjs`                                            | Date/time manipulation               |
+| `i18next` + `react-i18next`                        | Internationalization                 |
+| `@volkovlabs/components`                           | Shared UI components                 |
+| `@grafana/data`, `@grafana/ui`, `@grafana/runtime` | Grafana plugin SDK                   |
+| `@emotion/css`                                     | CSS-in-JS styling                    |
+
+## CI/CD
+
+- **CI** (`.github/workflows/push.yml`): Runs on push to `main` and all PRs. Uses `grafana/plugin-ci-workflows`.
+- **CD** (`.github/workflows/publish.yml`): Manual dispatch to dev/ops/prod environments.
+- The `.config/` directory is **scaffolded by Grafana** — do not edit files in it.
+- **Do NOT pin `grafana/plugin-ci-workflows` to a commit SHA.** Grafana's CI
+  enforces tagged releases only (e.g., `@ci-cd-workflows/v7`). SHA pinning
+  will fail the "Check for release channel" job. All other GitHub Actions
+  should be pinned to SHAs.
+
 ## Changelog Policy
 
-**Always update `CHANGELOG.md` when making changes.** Every commit that
-modifies code, documentation, dependencies, or configuration must have a
-corresponding entry in the changelog under the current unreleased version
-section. Add entries as part of the same commit or as a follow-up commit
-before pushing.
+Add entries under the current `[Unreleased]` section in `CHANGELOG.md`.
+Categorize under `### Added`, `### Changed`, `### Removed`, `### Fixed`,
+or `### Project Updates` as appropriate.
 
 ## Branching Policy
 
