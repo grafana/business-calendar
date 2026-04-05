@@ -35,6 +35,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Replaced `volkovlabs.io` URLs with Grafana equivalents.
 - Fixed stale `functionsRef` in inlined `useDashboardVariables` hook.
 - Fixed reverted `useRuntimeVariables` import to use local `useDashboardVariables` hook.
+- Fixed React 19 compatibility by shimming `ReactDOM.findDOMNode` removed in `react-overlays`.
 
 ### Added
 
