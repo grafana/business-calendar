@@ -22,6 +22,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Upgraded `@grafana/plugin-e2e` from 2.x to 3.4.10 for Grafana 12.4.2 E2E compatibility.
 - Skipped React 19 preview image in Playwright E2E tests (plugin uses React 18).
 - Inlined `useDashboardVariables` hook and removed `@volkovlabs/components` dependency.
+- Removed unused `grafana-dev` Docker Compose service.
 
 ### Fixed
 
@@ -29,6 +30,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Added `aria-label` to icon-only toolbar buttons for `@grafana/ui` 12.4.2 compatibility.
 - Replaced deprecated `classicColors` with `theme.visualization.palette`.
 - Typed `Drawer` mock props to fix `no-explicit-any` lint warning.
+- Replaced `volkovlabs.io` URLs with Grafana equivalents.
+- Fixed stale `functionsRef` in inlined `useDashboardVariables` hook.
 
 ### Added
 
