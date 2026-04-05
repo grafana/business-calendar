@@ -23,6 +23,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Skipped React 19 preview image in Playwright E2E tests (plugin uses React 18).
 - Inlined `useDashboardVariables` hook and removed `@volkovlabs/components` dependency.
 - Removed unused `grafana-dev` Docker Compose service.
+- Updated patch/minor dependencies (`@grafana/plugin-e2e` 3.4.11, `@swc/core` 1.15.24, `@swc/helpers` 0.5.21, `sass` 1.99.0).
 
 ### Fixed
 
