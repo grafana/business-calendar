@@ -12,7 +12,7 @@ built with TypeScript, React, and react-big-calendar.
 No backend component.
 Uses webpack (via `.config/`) for bundling and SWC for transpilation.
 
-**Node version:** >=24 (see `.nvmrc`). **Package manager:** npm.
+**Node version:** >=24 (see `.nvmrc` / `mise.toml`). **Package manager:** npm.
 
 ## Build / Dev Commands
 
@@ -286,6 +286,10 @@ or `### Project Updates` as appropriate.
   changes.
 - **Always create pull requests as drafts**
   (`gh pr create --draft`).
+- **Use categories in PR summaries** — group changes
+  under headings like `### CI/CD`, `### Dependencies`,
+  `### Bug Fixes`, `### AGENTS.md`, `### Tooling`, etc.
+  so reviewers can quickly scan the scope of the PR.
 
 ## Testing Conventions
 
