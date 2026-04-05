@@ -83,6 +83,9 @@ Every directory has a barrel `index.ts`.
   issues before committing. When wrapping long lines,
   fill each line as close to 120 characters as possible
   rather than wrapping early.
+- **Always run `npm run lint`** before committing changes
+  to `src/`. Fix errors with `npm run lint:fix` and verify
+  no errors remain.
 - **Always run cspell before committing.** Run
   `npx cspell -c cspell.config.json` on all
   changed files and fix any issues. Add new words
