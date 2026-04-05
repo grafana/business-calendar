@@ -20,13 +20,6 @@ services:
       retries: 10
       start_period: 30s
 
-  grafana-dev:
-    image: ghcr.io/volkovlabs/app:latest
-    ports:
-      - 3000:3000/tcp
-    profiles:
-      - dev
-
   playwright:
     build:
       context: .
