@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD013 -->
-
 # AGENTS.md — Business Calendar (Grafana Plugin)
 
 > Grafana panel plugin providing a calendar view for time-series data.
@@ -82,7 +80,9 @@ Every directory has a barrel `index.ts`.
 - **Always run `npx markdownlint-cli2`** on any `.md`
   file you create or modify (including `AGENTS.md`,
   `README.md`, `CHANGELOG.md`) and fix all reported
-  issues before committing.
+  issues before committing. When wrapping long lines,
+  fill each line as close to 120 characters as possible
+  rather than wrapping early.
 - **Always run cspell before committing.** Run
   `npx cspell -c cspell.config.json` on all
   changed files and fix any issues. Add new words
@@ -97,12 +97,6 @@ Every directory has a barrel `index.ts`.
   Do not push as part of completing a task.
   Never chain `git commit && git push` in one command.
   Always wait for the user to explicitly ask to push.
-- **After pushing, always update the PR summary** if a
-  PR exists for the current branch. Treat push and PR
-  update as an atomic pair — never stop between them.
-  Use `gh pr edit` to update the title and body with
-  well-formatted text that reflects all changes across
-  the entire branch.
 - **Do not add a `Co-Authored-By` line** to commit messages.
 - **Prefer subagents** for research, code exploration,
   and multi-step work. Use the Task tool with
@@ -163,8 +157,7 @@ Destructured members sorted alphabetically within braces.
 
 ### Types
 
-- Interfaces for data models — every property has
-  a JSDoc `/** */` comment with `@type` tag.
+- Interfaces for data models (see JSDoc Comments section).
 - Component props use `type Props = ...`
   or `interface Props extends Pick<...>`.
 - `const enum` for internal-only enums; regular `enum`
@@ -180,8 +173,6 @@ Destructured members sorted alphabetically within braces.
   `const Name: React.FC<Props> = ({ ... }) => { ... }`.
 - Props destructured in the function signature,
   not inside the body.
-- Every logical block (hooks, computed values, effects)
-  gets a `/** Label */` JSDoc comment.
 - Styles via `useStyles2(getComponentStyles)`
   with `GrafanaTheme2` parameter.
 
@@ -242,7 +233,9 @@ export const CalendarPanel: React.FC<Props> = ({ events }) => {
 
 ## ESLint
 
-Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`, `@volkovlabs/eslint-config`, and `eslint-config-prettier`. Custom rule: `@typescript-eslint/no-empty-object-type: off`. Test files, mocks, config files, and server dirs are excluded from linting.
+Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`, `@volkovlabs/eslint-config`, and
+`eslint-config-prettier`. Custom rule: `@typescript-eslint/no-empty-object-type: off`. Test files, mocks,
+config files, and server dirs are excluded.
 
 ### Additional Rules
 
@@ -265,7 +258,6 @@ Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`, `@volkovlabs/
 
 - **CI** (`.github/workflows/push.yml`): Runs on push to `main` and all PRs. Uses `grafana/plugin-ci-workflows`.
 - **CD** (`.github/workflows/publish.yml`): Manual dispatch to dev/ops/prod environments.
-- The `.config/` directory is **scaffolded by Grafana** — do not edit files in it.
 - **Do NOT pin `grafana/plugin-ci-workflows` to a commit SHA.** Grafana's CI
   enforces tagged releases only (e.g., `@ci-cd-workflows/v7`). SHA pinning
   will fail the "Check for release channel" job. All other GitHub Actions
@@ -281,8 +273,12 @@ or `### Project Updates` as appropriate.
 
 - **Never commit directly to `main`**. Always create a new branch for changes.
 - Use descriptive branch names (e.g., `feat/add-feature`, `fix/bug-description`).
-- When pushing new commits to a PR, always update the PR summary to reflect all
-  changes.
+- **After pushing, always update the PR summary** if a
+  PR exists for the current branch. Treat push and PR
+  update as an atomic pair — never stop between them.
+  Use `gh pr edit` to update the title and body with
+  well-formatted text that reflects all changes across
+  the entire branch.
 - **Always create pull requests as drafts**
   (`gh pr create --draft`).
 - **Use categories in PR summaries** — group changes

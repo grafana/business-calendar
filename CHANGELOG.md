@@ -1,5 +1,3 @@
-<!-- markdownlint-disable MD013 MD024 -->
-
 # Changelog
 
 All notable changes to the **Business Calendar Panel** plugin for Grafana are documented in this file.
@@ -37,7 +35,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 ### Added
 
 - Added `cspell.config.json` for spell checking with missing words.
-- Added `AGENTS.md` with build/test commands, code style guidelines, naming conventions, testing conventions, ESLint rules, changelog policy, and branching policy.
+- Added `AGENTS.md` with build/test commands, code style guidelines, naming conventions, testing conventions,
+  ESLint rules, changelog policy, and branching policy.
 
 ## [4.2.0] - 2025-10-23
 
@@ -213,7 +212,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 ### Added
 
 - Added Yearly view ([#134](https://github.com/VolkovLabs/business-calendar/pull/134)).
-- Introduced internationalization (Spanish, French, German, Chinese) ([#135](https://github.com/VolkovLabs/business-calendar/pull/135), [#138](https://github.com/VolkovLabs/business-calendar/pull/138)).
+- Introduced internationalization (Spanish, French, German, Chinese)
+  ([#135](https://github.com/VolkovLabs/business-calendar/pull/135), [#138](https://github.com/VolkovLabs/business-calendar/pull/138)).
 - Added default view selection option ([#137](https://github.com/VolkovLabs/business-calendar/pull/137)).
 - Enabled "scroll to time" feature in Big Calendar ([#140](https://github.com/VolkovLabs/business-calendar/pull/140), [#141](https://github.com/VolkovLabs/business-calendar/pull/141)).
 
@@ -265,10 +265,12 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ### Added
 
-- Upgraded to Grafana 9.5.2 ([#96](https://github.com/VolkovLabs/business-calendar/pull/96), [#101](https://github.com/VolkovLabs/business-calendar/pull/101)).
+- Upgraded to Grafana 9.5.2
+  ([#96](https://github.com/VolkovLabs/business-calendar/pull/96), [#101](https://github.com/VolkovLabs/business-calendar/pull/101)).
 - Added text formatting, mappings, and overrides ([#97](https://github.com/VolkovLabs/business-calendar/pull/97)).
 - Removed unused standard options ([#97](https://github.com/VolkovLabs/business-calendar/pull/97)).
-- Increased test coverage and updated testing library ([#100](https://github.com/VolkovLabs/business-calendar/pull/100), [#103](https://github.com/VolkovLabs/business-calendar/pull/103)).
+- Increased test coverage and updated testing library
+  ([#100](https://github.com/VolkovLabs/business-calendar/pull/100), [#103](https://github.com/VolkovLabs/business-calendar/pull/103)).
 - Migrated to Plugin Tools 1.5.2 ([#101](https://github.com/VolkovLabs/business-calendar/pull/101)).
 - Upgraded to Node 18 ([#101](https://github.com/VolkovLabs/business-calendar/pull/101)).
 - Added E2E Cypress testing ([#102](https://github.com/VolkovLabs/business-calendar/pull/102)).
