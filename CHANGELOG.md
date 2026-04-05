@@ -15,13 +15,14 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Removed unused dependencies (`@stylistic/eslint-plugin`, `tsconfig-paths`).
 - Simplified `docker-compose.yaml` to extend base config.
 - Pinned CI/CD workflows to `ci-cd-workflows/v7` instead of `@main`.
-- Pinned Playwright Docker image to `v1.58.2-noble`.
+- Pinned Playwright Docker image to `v1.59.1-noble`.
 - Bumped minimum supported Grafana version to 12.0.0.
 - Upgraded `@grafana/plugin-e2e` from 2.x to 3.4.10 for Grafana 12.4.2 E2E compatibility.
 - Skipped React 19 preview image in Playwright E2E tests (plugin uses React 18).
 - Inlined `useDashboardVariables` hook and removed `@volkovlabs/components` dependency.
 - Removed unused `grafana-dev` Docker Compose service.
-- Updated patch/minor dependencies (`@grafana/plugin-e2e` 3.4.11, `@swc/core` 1.15.24, `@swc/helpers` 0.5.21, `sass` 1.99.0).
+- Updated patch/minor dependencies (`@grafana/plugin-e2e` 3.4.11, `@playwright/test` 1.59.1, `@swc/core` 1.15.24,
+  `@swc/helpers` 0.5.21, `sass` 1.99.0).
 
 ### Fixed
 
