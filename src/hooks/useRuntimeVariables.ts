@@ -1,8 +1,8 @@
 import { EventBus } from '@grafana/data';
-import { useDashboardVariables } from '@volkovlabs/components';
 import { RuntimeVariable } from 'types';
 
 import { getVariablesMap } from '../utils';
+import { useDashboardVariables } from './useDashboardVariables';
 
 /**
  * Runtime Variables

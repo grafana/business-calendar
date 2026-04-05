@@ -258,7 +258,6 @@ Flat config (ESLint 9) extending `@grafana/eslint-config/flat.js`, `@volkovlabs/
 | `react-big-calendar`                               | Calendar rendering engine            |
 | `dayjs`                                            | Date/time manipulation               |
 | `i18next` + `react-i18next`                        | Internationalization                 |
-| `@volkovlabs/components`                           | Shared UI components                 |
 | `@grafana/data`, `@grafana/ui`, `@grafana/runtime` | Grafana plugin SDK                   |
 | `@emotion/css`                                     | CSS-in-JS styling                    |
 
