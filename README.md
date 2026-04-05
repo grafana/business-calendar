@@ -4,18 +4,27 @@
 [![CD](https://github.com/grafana/business-calendar/actions/workflows/publish.yml/badge.svg)](https://github.com/grafana/business-calendar/actions/workflows/publish.yml)
 [![License](https://img.shields.io/github/license/grafana/business-calendar)](https://github.com/grafana/business-calendar/blob/main/LICENSE)
 
->This project was originally contributed by [Volkov Labs](https://github.com/volkovlabs/business-calendar) - thanks for all your great work!
+> This project was originally contributed by
+> [Volkov Labs](https://github.com/volkovlabs/business-calendar) — thanks for all your great work!
 >
->We have republished under the same plugin ID, keeping the community signature. This means you can simply update your plugin version. A new ID would have required manual updates to your dashboards. For additional information on the changes, see the [Notices](https://github.com/grafana/business-calendar/blob/main/NOTICES.md).
+> We have republished under the same plugin ID, keeping the community signature. This means you can
+> simply update your plugin version. A new ID would have required manual updates to your dashboards.
+> For additional information on the changes, see the
+> [Notices](https://github.com/grafana/business-calendar/blob/main/NOTICES.md).
 
-This project is currently maintained by Grafana Labs. We welcome pull requests and will review them on a best-effort basis. If you're interested in taking on this project long-term, contact [integrations@grafana.com](mailto:integrations@grafana.com). We're eager to work with new maintainers and eventually hand over the project.
+This project is currently maintained by Grafana Labs. We welcome pull requests and will review them
+on a best-effort basis. If you're interested in taking on this project long-term, contact
+[integrations@grafana.com](mailto:integrations@grafana.com). We're eager to work with new
+maintainers and eventually hand over the project.
 
-**Business Calendar** is a powerful Grafana plugin that transforms your data into an intuitive calendar view. Seamlessly visualize schedules, deadlines, and time-based metrics from any Grafana-supported data source.
-
+**Business Calendar** is a powerful Grafana plugin that transforms your data into an intuitive
+calendar view. Seamlessly visualize schedules, deadlines, and time-based metrics from any
+Grafana-supported data source.
 
 ## 🚀 Features
 
-- **Multi-Language Toolbar**: Switch between Day, Week, Month, Work Week, Year, and Agenda views with ease. Navigate to today’s events or browse time ranges.
+- **Multi-Language Toolbar**: Switch between Day, Week, Month, Work Week, Year, and Agenda views with ease.
+  Navigate to today’s events or browse time ranges.
 - **Data Flexibility**: Integrate and display events from any Grafana data source.
 - **Time Range Filtering**: Zoom in on specific periods for focused analysis.
 - **Threshold Coloring**: Highlight events with customizable colors using Grafana thresholds.
@@ -34,10 +43,13 @@ This project is currently maintained by Grafana Labs. We welcome pull requests a
 
 Get started with Business Calendar in just a few steps:
 
-1. Install the plugin via the [Grafana Plugins Catalog](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/) or using the Grafana CLI:
+1. Install the plugin via the [Grafana Plugins Catalog](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/)
+   or using the Grafana CLI:
+
    ```bash
    grafana-cli plugins install marcusolsson-calendar-panel
    ```
+
 2. Restart Grafana to load the plugin.
 3. Add the **Business Calendar** panel to your dashboard and configure your data source.
 
@@ -45,14 +57,13 @@ Get started with Business Calendar in just a few steps:
 
 Explore comprehensive guides and resources to master the plugin:
 
-| Section                                                                              | Description                                      |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------ |
-| [Basic configuration](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/basic-config/) | Learn the essentials to get started.             |
-| [Configuration options](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/configuration/)   | Dive into all customization settings.            |
-| [Features](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/features/)                | Discover key capabilities and use cases.         |
-| [Tutorials](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/tutorials/)              | Follow step-by-step guides for practical setups. |
-| [Release notes](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/release/)            | Stay updated on new features and fixes.          |
-
+| Section                                                                                                     | Description                                      |
+| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| [Basic configuration](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/basic-config/)    | Learn the essentials to get started.             |
+| [Configuration options](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/configuration/) | Dive into all customization settings.            |
+| [Features](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/features/)                   | Discover key capabilities and use cases.         |
+| [Tutorials](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/tutorials/)                 | Follow step-by-step guides for practical setups. |
+| [Release notes](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/release/)               | Stay updated on new features and fixes.          |
 
 ## 📜 License
 
