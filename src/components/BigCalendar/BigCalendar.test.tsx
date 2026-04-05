@@ -518,8 +518,8 @@ describe('Big Calendar', () => {
       location: 'Room',
       links: [
         {
-          href: 'https://volkovlabs.io/',
-          title: 'Volkovlabs',
+          href: 'https://grafana.com/',
+          title: 'Grafana',
           target: undefined,
           origin: {} as any,
         },
@@ -540,7 +540,7 @@ describe('Big Calendar', () => {
      * Event Details
      */
     expect(eventDetailsSelectors.root()).toBeInTheDocument();
-    expect(eventDetailsSelectors.root()).toHaveTextContent(`Volkovlabs`);
+    expect(eventDetailsSelectors.root()).toHaveTextContent(`Grafana`);
   });
 
   it('Should not show Description', async () => {

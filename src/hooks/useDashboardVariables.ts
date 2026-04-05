@@ -42,6 +42,7 @@ export const useDashboardVariables = <TVariable = TypedVariableModel, TState = T
    * Refs
    */
   const functionsRef = useRef({ getOne, toState });
+  functionsRef.current = { getOne, toState };
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   /**
@@ -51,7 +52,10 @@ export const useDashboardVariables = <TVariable = TypedVariableModel, TState = T
   const [variable, setVariable] = useState<TVariable | undefined>();
 
   /**
-   * Scene context for Scene-based dashboards
+   * Scene context for Scene-based dashboards.
+   * Note: this calls useState() from the scene context object, not React.useState().
+   * The global is either always present or always absent for a given Grafana instance,
+   * so the conditional access does not violate the rules of hooks in practice.
    */
   const sceneContext = (window as unknown as Record<string, any>).__grafanaSceneContext?.useState(); // eslint-disable-line @typescript-eslint/no-explicit-any
 
