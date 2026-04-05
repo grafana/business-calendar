@@ -23,6 +23,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Removed unused `grafana-dev` Docker Compose service.
 - Updated patch/minor dependencies (`@grafana/plugin-e2e` 3.4.11, `@playwright/test` 1.59.1, `@swc/core` 1.15.24,
   `@swc/helpers` 0.5.21, `sass` 1.99.0).
+- Optimized Playwright config: increased workers (4 local, 2 CI), reduced retries (0 local, 2 CI).
+- Optimized Playwright Dockerfile with dependency layer caching.
 
 ### Fixed
 

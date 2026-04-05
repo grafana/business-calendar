@@ -18,14 +18,14 @@ export default defineConfig({
   fullyParallel: true,
 
   /**
-   * Number of retry.
+   * Number of retries.
    */
-  retries: 6,
+  retries: process.env.CI ? 2 : 0,
 
   /**
    * Number of workers.
    */
-  workers: 1,
+  workers: process.env.CI ? 2 : 4,
 
   /**
    * Reporter to use. See https://playwright.dev/docs/test-reporters

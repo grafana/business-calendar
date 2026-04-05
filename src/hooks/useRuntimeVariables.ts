@@ -1,9 +1,8 @@
 import { EventBus } from '@grafana/data';
 import { RuntimeVariable } from 'types';
 
-import { useDashboardVariables } from './useDashboardVariables';
-
 import { getVariablesMap } from '../utils';
+import { useDashboardVariables } from './useDashboardVariables';
 
 /**
  * Runtime Variables
