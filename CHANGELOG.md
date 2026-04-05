@@ -31,6 +31,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Typed `Drawer` mock props to fix `no-explicit-any` lint warning.
 - Replaced `volkovlabs.io` URLs with Grafana equivalents.
 - Fixed stale `functionsRef` in inlined `useDashboardVariables` hook.
+- Fixed reverted `useRuntimeVariables` import to use local `useDashboardVariables` hook.
 
 ### Added
 
