@@ -13,14 +13,14 @@ services:
     ports:
       - 3000:3000/tcp
     volumes:
-      - ../dist:/var/lib/grafana/plugins/volkov-calendar-panel
+      - ../dist:/var/lib/grafana/plugins/marcusolsson-calendar-panel
       - ../provisioning:/etc/grafana/provisioning
-      - ..:/root/volkov-calendar-panel
+      - ..:/root/marcusolsson-calendar-panel
 
     environment:
       NODE_ENV: development
-      GF_LOG_FILTERS: plugin.volkovlabs-calendar-panel:debug
+      GF_LOG_FILTERS: plugin.marcusolsson-calendar-panel:debug
       GF_LOG_LEVEL: debug
       GF_DATAPROXY_LOGGING: 1
-      GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: volkov-calendar-panel
+      GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS: marcusolsson-calendar-panel
       GF_DEFAULT_APP_MODE: development

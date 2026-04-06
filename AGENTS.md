@@ -83,6 +83,8 @@ Every directory has a barrel `index.ts`.
   issues before committing. When wrapping long lines,
   fill each line as close to 120 characters as possible
   rather than wrapping early.
+- **Always run `npm run typecheck`** when `src/` files
+  are changed and fix any type errors before committing.
 - **Always run `npm run lint`** before committing changes
   to `src/`. Fix errors with `npm run lint:fix` and verify
   no errors remain.
@@ -101,6 +103,14 @@ Every directory has a barrel `index.ts`.
   Never chain `git commit && git push` in one command.
   Always wait for the user to explicitly ask to push.
 - **Do not add a `Co-Authored-By` line** to commit messages.
+- **After pushing, always update the PR summary** if a
+  PR exists for the current branch. Treat push and PR
+  update as an atomic pair — never stop between them.
+  Use `gh pr edit` to update the title and body with
+  well-formatted text that reflects all changes across
+  the entire branch. **Wrap PR summary lines at 120
+  characters** — use the full width, do not wrap
+  shorter than necessary.
 - **Prefer subagents** for research, code exploration,
   and multi-step work. Use the Task tool with
   `explore` or `general` agents rather than running
@@ -353,3 +363,11 @@ update `src/migration.ts`:
 - Use `Array.isArray` / type checks
   for format changes.
 - Add corresponding tests in `migration.test.ts`.
+
+## Important
+
+Always create a branch before making any changes. Never commit directly to `main`.
+
+Do not add a `Co-Authored-By` line to commit messages.
+
+When checking out a branch or `main`, always `git fetch` and `git pull` to ensure you have the latest changes.
