@@ -31,8 +31,10 @@ npm test                       # Jest watch mode
 npm run test:ci                # Jest all tests, coverage
 npx jest path/to/file.test.ts  # Run single test file
 npx jest --testPathPattern="migration"  # Pattern match
+npx jest -t "Should render"            # Single test by name
 npm run test:e2e               # Playwright E2E tests
 npm run test:e2e:dev           # Playwright interactive UI
+npm run test:e2e:docker        # Full Docker Compose (Grafana + tests)
 ```
 
 Jest sets `TZ=UTC` globally.
