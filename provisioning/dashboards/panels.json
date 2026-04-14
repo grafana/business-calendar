@@ -251,7 +251,7 @@
                 "value": [
                   {
                     "title": "Show info",
-                    "url": "https://demo.volkovlabs.io/d/O73WAt27z/grafana-plugin-info?orgId=1&var-plugin=${__data.fields.Slug}&from=now-90d&to=now"
+                    "url": "https://play.grafana.org/d/O73WAt27z/grafana-plugin-info?orgId=1&var-plugin=${__data.fields.Slug}&from=now-90d&to=now"
                   }
                 ]
               }

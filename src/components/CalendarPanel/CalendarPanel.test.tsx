@@ -172,7 +172,7 @@ describe('Panel', () => {
       expect.objectContaining({
         events: expect.arrayContaining([
           expect.objectContaining({
-            color: '#7EB26D',
+            color: 'green',
             description: [],
             end: dayjs(getSafeDate()),
             labels: ['event1'],

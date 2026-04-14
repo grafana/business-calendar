@@ -1,0 +1,37 @@
+{
+  "language": "en",
+  "ignorePaths": [
+    "package.json",
+    ".config/**",
+    "docs/docs.mk",
+    "docs/make-docs",
+    "docs/Makefile",
+    "docker-compose.yml",
+    "docker-compose.yaml",
+    "LICENSE-original",
+    "node_modules/**",
+    "dist/**",
+    "coverage/**",
+    "provisioning/**",
+    "playwright-report/**",
+    "src/i18n/translations/**"
+  ],
+  "words": [
+    "datasource",
+    "doesn",
+    "dont",
+    "evenodd",
+    "flexbox",
+    "marcusolsson",
+    "PXJF",
+    "SSSSSSSZ",
+    "subresource",
+    "testid",
+    "Texbox",
+    "timeslot",
+    "typecheck",
+    "UGRQBB",
+    "Volkov",
+    "volkovlabs"
+  ]
+}

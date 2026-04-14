@@ -1,8 +1,8 @@
 import { CustomVariableModel, EventBusSrv, LoadingState, TypedVariableModel, VariableHide } from '@grafana/data';
 import { renderHook } from '@testing-library/react';
-import { useDashboardVariables } from '@volkovlabs/components';
 
 import { VariableType } from '../types';
+import { useDashboardVariables } from './useDashboardVariables';
 import { useRuntimeVariables } from './useRuntimeVariables';
 
 const mockUseDashboardVariables = useDashboardVariables as jest.MockedFunction<typeof useDashboardVariables>;
@@ -28,9 +28,9 @@ jest.mock('@grafana/runtime', () => ({
 }));
 
 /**
- * Mock @volkovlabs/components
+ * Mock useDashboardVariables
  */
-jest.mock('@volkovlabs/components', () => ({
+jest.mock('./useDashboardVariables', () => ({
   useDashboardVariables: jest.fn(),
 }));
 

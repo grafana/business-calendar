@@ -63,6 +63,7 @@ export const BigToolbar: React.FC<Props> = ({ localizer: { messages }, label, on
             variant="secondary"
             data-testid={TEST_IDS.bigCalendarToolbar.buttonBack}
             icon="angle-left"
+            aria-label={messages.previous as string}
           />
           <Button
             type="button"
@@ -70,6 +71,7 @@ export const BigToolbar: React.FC<Props> = ({ localizer: { messages }, label, on
             variant="secondary"
             data-testid={TEST_IDS.bigCalendarToolbar.buttonNext}
             icon="angle-right"
+            aria-label={messages.next as string}
           />
         </ButtonGroup>
       </div>

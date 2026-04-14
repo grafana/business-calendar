@@ -1,14 +1,32 @@
 import tsParser from '@typescript-eslint/parser';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import prettierConfig from 'eslint-config-prettier/flat';
 import grafanaConfig from '@grafana/eslint-config/flat.js';
 import eslintConfig from '@volkovlabs/eslint-config';
 
 /**
+ * Filter out legacy react-hooks config from @grafana/eslint-config.
+ * eslint-plugin-react-hooks@7 ships recommended-latest with
+ * plugins as string[] (legacy format), which ESLint 9 rejects.
+ * We re-add the plugin in flat config format with classic rules only.
+ */
+const filteredGrafanaConfig = grafanaConfig.filter((config) => !Array.isArray(config?.plugins));
+
+/**
  * Config
  */
 export default defineConfig(
-  ...grafanaConfig,
+  ...filteredGrafanaConfig,
+  {
+    plugins: {
+      'react-hooks': reactHooksPlugin,
+    },
+    rules: {
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+    },
+  },
   eslintConfig,
   prettierConfig,
   {
@@ -34,6 +52,5 @@ export default defineConfig(
     'src/__mocks__/**',
     'src/**/*.test.ts*',
     'test/*',
-    'webpack.config.ts',
   ])
 );

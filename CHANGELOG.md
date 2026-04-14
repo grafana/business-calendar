@@ -4,6 +4,44 @@ All notable changes to the **Business Calendar Panel** plugin for Grafana are do
 
 This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Changed
+
+- Bumped Node version requirement to 24.
+- Updated plugin build tooling (`.config/` from `@grafana/create-plugin` v7.0.8).
+- Added missing webpack dependencies (`imports-loader`, `webpack-subresource-integrity`, `webpack-virtual-modules`).
+- Updated dependencies within semver ranges (Grafana 12.4.2, webpack 5.105.4, i18next 25.10.10, sass 1.98.0, etc.).
+- Removed unused dependencies (`@stylistic/eslint-plugin`, `tsconfig-paths`).
+- Simplified `docker-compose.yaml` to extend base config.
+- Pinned CI/CD workflows to `ci-cd-workflows/v7` instead of `@main`.
+- Pinned Playwright Docker image to `v1.59.1-noble`.
+- Bumped minimum supported Grafana version to 12.0.0.
+- Upgraded `@grafana/plugin-e2e` from 2.x to 3.4.10 for Grafana 12.4.2 E2E compatibility.
+- Skipped React 19 preview image in Playwright E2E tests (pending upstream `react-overlays` fix).
+- Inlined `useDashboardVariables` hook and removed `@volkovlabs/components` dependency.
+- Removed unused `grafana-dev` Docker Compose service.
+- Updated patch/minor dependencies (`@grafana/plugin-e2e` 3.4.11, `@playwright/test` 1.59.1, `@swc/core` 1.15.24,
+  `@swc/helpers` 0.5.21, `sass` 1.99.0).
+- Optimized Playwright config: increased workers (4 local, 2 CI), reduced retries (0 local, 2 CI).
+- Optimized Playwright Dockerfile with dependency layer caching.
+
+### Fixed
+
+- Fixed ESLint flat config compatibility with `eslint-plugin-react-hooks@7` legacy plugins format.
+- Added `aria-label` to icon-only toolbar buttons for `@grafana/ui` 12.4.2 compatibility.
+- Replaced deprecated `classicColors` with `theme.visualization.palette`.
+- Typed `Drawer` mock props to fix `no-explicit-any` lint warning.
+- Replaced `volkovlabs.io` URLs with Grafana equivalents.
+- Fixed stale `functionsRef` in inlined `useDashboardVariables` hook.
+- Fixed reverted `useRuntimeVariables` import to use local `useDashboardVariables` hook.
+
+### Added
+
+- Added `cspell.config.json` for spell checking with missing words.
+- Added `AGENTS.md` with build/test commands, code style guidelines, naming conventions, testing conventions,
+  ESLint rules, changelog policy, and branching policy.
+
 ## [4.2.0] - 2025-10-23
 
 ### Project Updates
@@ -178,7 +216,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 ### Added
 
 - Added Yearly view ([#134](https://github.com/VolkovLabs/business-calendar/pull/134)).
-- Introduced internationalization (Spanish, French, German, Chinese) ([#135](https://github.com/VolkovLabs/business-calendar/pull/135), [#138](https://github.com/VolkovLabs/business-calendar/pull/138)).
+- Introduced internationalization (Spanish, French, German, Chinese)
+  ([#135](https://github.com/VolkovLabs/business-calendar/pull/135), [#138](https://github.com/VolkovLabs/business-calendar/pull/138)).
 - Added default view selection option ([#137](https://github.com/VolkovLabs/business-calendar/pull/137)).
 - Enabled "scroll to time" feature in Big Calendar ([#140](https://github.com/VolkovLabs/business-calendar/pull/140), [#141](https://github.com/VolkovLabs/business-calendar/pull/141)).
 
@@ -230,10 +269,12 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ### Added
 
-- Upgraded to Grafana 9.5.2 ([#96](https://github.com/VolkovLabs/business-calendar/pull/96), [#101](https://github.com/VolkovLabs/business-calendar/pull/101)).
+- Upgraded to Grafana 9.5.2
+  ([#96](https://github.com/VolkovLabs/business-calendar/pull/96), [#101](https://github.com/VolkovLabs/business-calendar/pull/101)).
 - Added text formatting, mappings, and overrides ([#97](https://github.com/VolkovLabs/business-calendar/pull/97)).
 - Removed unused standard options ([#97](https://github.com/VolkovLabs/business-calendar/pull/97)).
-- Increased test coverage and updated testing library ([#100](https://github.com/VolkovLabs/business-calendar/pull/100), [#103](https://github.com/VolkovLabs/business-calendar/pull/103)).
+- Increased test coverage and updated testing library
+  ([#100](https://github.com/VolkovLabs/business-calendar/pull/100), [#103](https://github.com/VolkovLabs/business-calendar/pull/103)).
 - Migrated to Plugin Tools 1.5.2 ([#101](https://github.com/VolkovLabs/business-calendar/pull/101)).
 - Upgraded to Node 18 ([#101](https://github.com/VolkovLabs/business-calendar/pull/101)).
 - Added E2E Cypress testing ([#102](https://github.com/VolkovLabs/business-calendar/pull/102)).
