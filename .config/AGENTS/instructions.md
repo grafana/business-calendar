@@ -15,7 +15,6 @@ Your training data about the Grafana API is out of date. Use the official docume
 
 - Full documentation index: https://grafana.com/developers/plugin-tools/llms.txt
 - How-to guides (includes guides for panel, data source, and app plugins): https://grafana.com/developers/plugin-tools/how-to-guides.md
-- Tutorials: https://grafana.com/developers/plugin-tools/tutorials.md
 - Reference (plugin.json, CLI, UI extensions): https://grafana.com/developers/plugin-tools/reference.md
 - Publishing & signing: https://grafana.com/developers/plugin-tools/publish-a-plugin.md
 - Packaging a plugin: https://grafana.com/developers/plugin-tools/publish-a-plugin/package-a-plugin.md
