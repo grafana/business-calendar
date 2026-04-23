@@ -28,6 +28,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ### Fixed
 
+- Added `pull-requests: read` permission to `publish.yml` so the reusable `cd.yml@ci-cd-workflows/v7` workflow can run.
 - Fixed ESLint flat config compatibility with `eslint-plugin-react-hooks@7` legacy plugins format.
 - Added `aria-label` to icon-only toolbar buttons for `@grafana/ui` 12.4.2 compatibility.
 - Replaced deprecated `classicColors` with `theme.visualization.palette`.
