@@ -26,8 +26,6 @@ The Business Calendar panel is a Grafana plugin that displays events in a stylis
 
 You can install the Business Calendar panel plugin from the [Grafana Plugins catalog](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/) or use the Grafana command line tool.
 
-{{< youtube id="1qYzHfPXJF8" >}}
-
 For the latter, please use the following command:
 
 ```sh
@@ -47,14 +45,6 @@ grafana cli plugins install marcusolsson-calendar-panel
 - Display annotations across all dashboards for the specified period.
 - Support for internationalization: Spanish, French, German, Portuguese, and Chinese.
 
-## Tutorial
-
-This video provides a detailed review of all configurable options. The video starts with fetching publicly available Grafana plugin catalog data and then demonstrates how the Business Calendar plugin options change the panel appearance and behavior.
-
-{{< youtube id="CvLqyY2fQfo" >}}
-
-For all other tutorials related to this plugin, refer to [Tutorials](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/tutorials/).
-
 ## Documentation
 
 | Section                             | Description                                                    |
@@ -62,7 +52,6 @@ For all other tutorials related to this plugin, refer to [Tutorials](https://gra
 | [Basic configuration](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/basic-config) | Explains plugin basics                                         |
 | [Configuration](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/configuration/)           | Describes configuration options                                |
 | [Features](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/features/)                | Describes plugin's features                                    |
-| [Tutorials](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/tutorials/)              | Easy to follow tutorials                                       |
 | [Release notes](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/<PLUGINS_VERSION>/release/)            | Stay up to date with the latest features and updates |
 
 ## License
