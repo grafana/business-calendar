@@ -18,6 +18,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Fixed `useMemo` dependencies in `useColors` to satisfy `react-hooks/preserve-manual-memoization` rule.
 - Replaced `-- Dashboard --` datasource indirection in provisioned `panels.json` with a direct JSON API query to
   fix Grafana 13 E2E panel loading race condition.
+- Skipped `Should add empty default calendar` E2E test on Grafana 13+ due to `@grafana/plugin-e2e` 3.x
+  `addPanel`/`refreshPanel` incompatibility with the Grafana 13 panel edit flow.
 
 ### Project Updates
 
