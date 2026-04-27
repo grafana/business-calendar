@@ -8,6 +8,12 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ### Changed
 
+- Re-enabled React 19 preview image in Playwright E2E tests.
+
+## [4.2.3] - 2026-04-23
+
+### Changed
+
 - Bumped Node version requirement to 24.
 - Updated plugin build tooling (`.config/` from `@grafana/create-plugin` v7.0.8).
 - Added missing webpack dependencies (`imports-loader`, `webpack-subresource-integrity`, `webpack-virtual-modules`).
@@ -18,7 +24,6 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Pinned Playwright Docker image to `v1.59.1-noble`.
 - Bumped minimum supported Grafana version to 12.0.0.
 - Upgraded `@grafana/plugin-e2e` from 2.x to 3.4.10 for Grafana 12.4.2 E2E compatibility.
-- Skipped React 19 preview image in Playwright E2E tests (pending upstream `react-overlays` fix).
 - Inlined `useDashboardVariables` hook and removed `@volkovlabs/components` dependency.
 - Removed unused `grafana-dev` Docker Compose service.
 - Updated patch/minor dependencies (`@grafana/plugin-e2e` 3.4.11, `@playwright/test` 1.59.1, `@swc/core` 1.15.24,
