@@ -9,6 +9,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 ### Changed
 
 - Re-enabled React 19 preview image in Playwright E2E tests.
+- Updated `@grafana/plugin-e2e` to 3.6.1, `@swc/core` to 1.15.32, `prettier` to 3.8.3, `webpack` to 5.106.2.
 
 ### Project Updates
 
