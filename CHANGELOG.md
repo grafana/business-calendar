@@ -16,6 +16,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Replaced `useEffect` + `setState` with `useMemo` in `useTimeRange`, `useAnnotationEvents`, and `useLocalizer`
   hooks to satisfy `react-hooks/set-state-in-effect` rule.
 - Fixed `useMemo` dependencies in `useColors` to satisfy `react-hooks/preserve-manual-memoization` rule.
+- Replaced `-- Dashboard --` datasource indirection in provisioned `panels.json` with a direct JSON API query to
+  fix Grafana 13 E2E panel loading race condition.
 
 ### Project Updates
 
