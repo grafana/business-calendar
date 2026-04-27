@@ -1,5 +1,5 @@
 import { AbsoluteTimeRange, EventBus, rangeUtil, TimeRange } from '@grafana/data';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useMemo } from 'react';
 import { CalendarOptions, TimeRangeType } from 'types';
 import { getVariableValue } from 'utils';
 
@@ -26,51 +26,31 @@ export const useTimeRange = ({
   const startTimeVariable = getVariable(options?.startTimeVariable || '');
   const endTimeVariable = getVariable(options?.endTimeVariable || '');
 
-  const [timeRange, setTimeRange] = useState(defaultTimeRange);
-
-  /**
-   * Update time range in state on source update
-   */
-  useEffect(() => {
+  const timeRange = useMemo(() => {
     /**
      * Manual
      */
     if (options.timeRangeType === TimeRangeType.MANUAL && options.endTimeRange && options.startTimeRange) {
-      /**
-       * Set Time Range for manual type
-       */
-      const manualTimeRange = rangeUtil.convertRawToRange({
+      return rangeUtil.convertRawToRange({
         from: options.startTimeRange,
         to: options.endTimeRange,
       });
-
-      setTimeRange(manualTimeRange);
-      return;
     }
 
     /**
      * Variable
      */
     if (options.timeRangeType === TimeRangeType.VARIABLE && startTimeVariable && endTimeVariable) {
-      /**
-       * Set Time Range for variable type
-       */
-      const manualTimeRange = rangeUtil.convertRawToRange({
+      return rangeUtil.convertRawToRange({
         from: getVariableValue(startTimeVariable),
         to: getVariableValue(endTimeVariable),
       });
-
-      /**
-       * Set Time Range by default
-       */
-      setTimeRange(manualTimeRange);
-      return;
     }
 
     /**
      * Default
      */
-    setTimeRange(defaultTimeRange);
+    return defaultTimeRange;
   }, [
     defaultTimeRange,
     endTimeVariable,
