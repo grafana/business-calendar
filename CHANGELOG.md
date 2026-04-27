@@ -10,6 +10,10 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 - Re-enabled React 19 preview image in Playwright E2E tests.
 
+### Project Updates
+
+- Updated `AGENTS.md` to require explicit user confirmation before any file edit.
+
 ## [4.2.3] - 2026-04-23
 
 ### Changed

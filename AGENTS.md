@@ -118,6 +118,9 @@ Every directory has a barrel `index.ts`.
   `explore` or `general` agents rather than running
   many search/read commands directly. Launch multiple
   agents in parallel when tasks are independent.
+- **Always confirm before editing files.** Before applying any file change
+  (`edit`, `write`, `ast_edit`, `notebook`), describe the change and wait
+  for explicit user approval.
 
 ## Code Style
 
