@@ -10,6 +10,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 - Re-enabled React 19 preview image in Playwright E2E tests.
 - Updated `@grafana/plugin-e2e` to 3.6.1, `@swc/core` to 1.15.32, `prettier` to 3.8.3, `webpack` to 5.106.2.
+- Prepared plugin for React 19 compatibility: externalized `react/jsx-runtime`, bumped `grafanaDependency` to
+  `>=12.3.0`, and updated `@grafana/data`, `@grafana/runtime`, `@grafana/ui` to 12.4.2.
 
 ### Project Updates
 
