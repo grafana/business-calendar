@@ -15,6 +15,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
   `>=12.3.0`, and updated `@grafana/data`, `@grafana/runtime`, `@grafana/ui` to 12.4.2.
 - Replaced `useEffect` + `setState` with `useMemo` in `useTimeRange`, `useAnnotationEvents`, and `useLocalizer`
   hooks to satisfy `react-hooks/set-state-in-effect` rule.
+- Replaced `Array.from(Array(n))` with `Array.from({ length: n })` in `useAnnotationEvents` for consistency with
+  `useCalendarEvents`.
 - Fixed `useMemo` dependencies in `useColors` to satisfy `react-hooks/preserve-manual-memoization` rule.
 - Replaced `-- Dashboard --` datasource indirection in provisioned `panels.json` with a direct JSON API query to
   fix Grafana 13 E2E panel loading race condition.

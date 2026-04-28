@@ -87,7 +87,7 @@ const useDashboardAnnotations = (timeRange: TimeRange, dashboardAnnotations?: Da
       /**
        * Return annotations
        */
-      return Array.from(Array(annotation.length)).map((event, index) => {
+      return Array.from({ length: annotation.length }).map((event, index) => {
         return {
           title: title?.values[index] || '',
           tags: tags?.values[index] || [],
