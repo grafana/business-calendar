@@ -9,10 +9,10 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 ### Changed
 
 - Re-enabled React 19 preview image in Playwright E2E tests.
-- Updated `@grafana/plugin-e2e` to 3.6.1, `@swc/core` to 1.15.32, `prettier` to 3.8.3, `webpack` to 5.106.2.
+- Updated `@grafana/eslint-config` to 9.0.0, `@grafana/plugin-e2e` to 3.6.1, `@swc/core` to 1.15.32, `prettier` to
+  3.8.3, `webpack` to 5.106.2.
 - Prepared plugin for React 19 compatibility: externalized `react/jsx-runtime`, bumped `grafanaDependency` to
   `>=12.3.0`, and updated `@grafana/data`, `@grafana/runtime`, `@grafana/ui` to 12.4.2.
-- Bumped `@grafana/eslint-config` to 9.0.0 and `@grafana/plugin-e2e` to 3.6.1.
 - Replaced `useEffect` + `setState` with `useMemo` in `useTimeRange`, `useAnnotationEvents`, and `useLocalizer`
   hooks to satisfy `react-hooks/set-state-in-effect` rule.
 - Fixed `useMemo` dependencies in `useColors` to satisfy `react-hooks/preserve-manual-memoization` rule.
@@ -39,6 +39,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Pinned Playwright Docker image to `v1.59.1-noble`.
 - Bumped minimum supported Grafana version to 12.0.0.
 - Upgraded `@grafana/plugin-e2e` from 2.x to 3.4.10 for Grafana 12.4.2 E2E compatibility.
+- Skipped React 19 preview image in Playwright E2E tests (pending upstream `react-overlays` fix).
 - Inlined `useDashboardVariables` hook and removed `@volkovlabs/components` dependency.
 - Removed unused `grafana-dev` Docker Compose service.
 - Updated patch/minor dependencies (`@grafana/plugin-e2e` 3.4.11, `@playwright/test` 1.59.1, `@swc/core` 1.15.24,
