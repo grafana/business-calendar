@@ -198,6 +198,7 @@ export const useCalendarRange = (
       });
 
       if (outOfRange) {
+        // eslint-disable-next-line react-hooks/set-state-in-effect -- Intentional sync: reset calendar bounds when dashboard time range changes externally
         setCalendarFrom(timeRange.from.toDate());
         setCalendarTo(timeRange.to.toDate());
         previousTimeRange.current = timeRange;

@@ -61,57 +61,55 @@ const useApiAnnotations = (timeRange: TimeRange, options: CalendarOptions) => {
  * @param data
  */
 const useDashboardAnnotations = (timeRange: TimeRange, dashboardAnnotations?: DataFrame[]) => {
-  const [annotations, setAnnotations] = useState<AnnotationEvent[]>([]);
-
-  useEffect(() => {
-    if (!!dashboardAnnotations?.length) {
-      /**
-       * Get dashboard annotations
-       */
-      const annotations = dashboardAnnotations.flatMap((annotation) => {
-        /**
-         * Get necessary fields
-         */
-        const title = annotation.fields.find((field) => field.name === 'title');
-        const tags = annotation.fields.find((field) => field.name === 'tags');
-        const color = annotation.fields.find((field) => field.name === 'color');
-        const time = annotation.fields.find((field) => field.name === 'time');
-        const timeEnd = annotation.fields.find((field) => field.name === 'timeEnd');
-
-        /**
-         * Text use for description
-         */
-        const text = annotation.fields.find((field) => field.name === 'text');
-
-        /**
-         * Return annotations
-         */
-        return Array.from(Array(annotation.length)).map((event, index) => {
-          return {
-            title: title?.values[index] || '',
-            tags: tags?.values[index] || [],
-            color: color?.values[index] || '',
-            time: time?.values[index] || undefined,
-            text: text?.values[index] || '',
-            timeEnd: timeEnd?.values[index] || undefined,
-          };
-        });
-      });
-
-      /**
-       * Filter annotations by time range
-       * Define start and end dates
-       */
-      const startDate = timeRange.from.valueOf();
-      const endDate = timeRange.to.valueOf();
-
-      const filteredAnnotations = annotations.filter((item) => {
-        const itemDate = dayjs(item.time);
-        return itemDate.isAfter(startDate) && itemDate.isBefore(endDate);
-      });
-
-      setAnnotations(filteredAnnotations);
+  const annotations = useMemo(() => {
+    if (!dashboardAnnotations?.length) {
+      return [];
     }
+
+    /**
+     * Get dashboard annotations
+     */
+    const parsed = dashboardAnnotations.flatMap((annotation) => {
+      /**
+       * Get necessary fields
+       */
+      const title = annotation.fields.find((field) => field.name === 'title');
+      const tags = annotation.fields.find((field) => field.name === 'tags');
+      const color = annotation.fields.find((field) => field.name === 'color');
+      const time = annotation.fields.find((field) => field.name === 'time');
+      const timeEnd = annotation.fields.find((field) => field.name === 'timeEnd');
+
+      /**
+       * Text use for description
+       */
+      const text = annotation.fields.find((field) => field.name === 'text');
+
+      /**
+       * Return annotations
+       */
+      return Array.from({ length: annotation.length }).map((event, index) => {
+        return {
+          title: title?.values[index] || '',
+          tags: tags?.values[index] || [],
+          color: color?.values[index] || '',
+          time: time?.values[index] || undefined,
+          text: text?.values[index] || '',
+          timeEnd: timeEnd?.values[index] || undefined,
+        };
+      });
+    });
+
+    /**
+     * Filter annotations by time range
+     * Define start and end dates
+     */
+    const startDate = timeRange.from.valueOf();
+    const endDate = timeRange.to.valueOf();
+
+    return parsed.filter((item) => {
+      const itemDate = dayjs(item.time);
+      return itemDate.isAfter(startDate) && itemDate.isBefore(endDate);
+    });
   }, [dashboardAnnotations, timeRange]);
 
   return annotations;

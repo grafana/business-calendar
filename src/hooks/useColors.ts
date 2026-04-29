@@ -8,17 +8,18 @@ import { useMemo } from 'react';
  */
 export const useColors = (fieldConfig?: FieldConfigSource) => {
   const theme = useTheme2();
+  const color = fieldConfig?.defaults.color;
 
   return useMemo(() => {
     let colors = theme.visualization.palette;
-    if (fieldConfig?.defaults.color) {
-      const mode = getFieldColorMode(fieldConfig.defaults.color.mode);
+    if (color) {
+      const mode = getFieldColorMode(color.mode);
       if (mode && mode.getColors) {
         colors = mode.getColors(theme);
-      } else if (fieldConfig.defaults.color.mode === FieldColorModeId.Fixed && fieldConfig.defaults.color.fixedColor) {
-        colors = [fieldConfig.defaults.color.fixedColor];
+      } else if (color.mode === FieldColorModeId.Fixed && color.fixedColor) {
+        colors = [color.fixedColor];
       }
     }
     return colors;
-  }, [fieldConfig?.defaults.color, theme]);
+  }, [color, theme]);
 };

@@ -8,6 +8,19 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ### Changed
 
+- Updated minimum Grafana version to 12.3.0 for React 19 support.
+
+### Project Updates
+
+- Updated development tooling dependencies.
+- Refactored internal hooks for React 19 compatibility.
+- Improved E2E test coverage and stability on Grafana 13+.
+- Improved CI workflows: coverage reporting, PR file summaries, and automated changelog stamping on release.
+
+## [4.2.3] - 2026-04-23
+
+### Changed
+
 - Bumped Node version requirement to 24.
 - Updated plugin build tooling (`.config/` from `@grafana/create-plugin` v7.0.8).
 - Added missing webpack dependencies (`imports-loader`, `webpack-subresource-integrity`, `webpack-virtual-modules`).

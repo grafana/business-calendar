@@ -62,7 +62,7 @@ Explore comprehensive guides and resources to master the plugin:
 | [Basic configuration](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/basic-config/)    | Learn the essentials to get started.             |
 | [Configuration options](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/configuration/) | Dive into all customization settings.            |
 | [Features](https://grafana.com/docs/plugins/marcusolsson-calendar-panel/latest/features/)                   | Discover key capabilities and use cases.         |
-| [Release notes](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/?tab=changelog)               | Stay updated on new features and fixes.          |
+| [Release notes](https://grafana.com/grafana/plugins/marcusolsson-calendar-panel/?tab=changelog)             | Stay updated on new features and fixes.          |
 
 ## 📜 License
 

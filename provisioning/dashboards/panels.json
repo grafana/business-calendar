@@ -30,8 +30,8 @@
   "panels": [
     {
       "datasource": {
-        "type": "datasource",
-        "uid": "-- Dashboard --"
+        "type": "marcusolsson-json-datasource",
+        "uid": "X6tfeT2nz"
       },
       "fieldConfig": {
         "defaults": {
@@ -100,12 +100,71 @@
       "pluginVersion": "3.6.0",
       "targets": [
         {
+          "cacheDurationSeconds": 300,
           "datasource": {
-            "type": "datasource",
-            "uid": "-- Dashboard --"
+            "type": "marcusolsson-json-datasource",
+            "uid": "X6tfeT2nz"
           },
-          "panelId": 15,
-          "refId": "A"
+          "fields": [
+            {
+              "jsonPath": "$.items[*].name",
+              "language": "jsonpath"
+            },
+            {
+              "jsonPath": "$.items[*].slug",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].typeName",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].version",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].downloads",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].description",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].signatureType",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].orgName",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].createdAt",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].updatedAt",
+              "language": "jsonpath",
+              "name": ""
+            },
+            {
+              "jsonPath": "$.items[*].url",
+              "language": "jsonpath",
+              "name": ""
+            }
+          ],
+          "method": "GET",
+          "queryParams": "",
+          "refId": "A",
+          "urlPath": "/"
         }
       ],
       "title": "Calendar",

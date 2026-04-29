@@ -6,7 +6,7 @@ import esLocale from 'dayjs/locale/es';
 import frLocale from 'dayjs/locale/fr';
 import ptLocale from 'dayjs/locale/pt';
 import zhLocale from 'dayjs/locale/zh';
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { dayjsLocalizer } from 'react-big-calendar';
 import { useTranslation } from 'react-i18next';
 
@@ -79,19 +79,14 @@ export const useLocalizer = (options: CalendarOptions) => {
   /**
    * Is used for days of the week and month names
    */
-  const [dayjsLocale, setDayjsLocale] = useState(dayjsLocales.en);
-
-  /**
-   * Update Dayjs locale on language change
-   */
-  useEffect(() => {
+  const dayjsLocale = useMemo(() => {
     let locale = dayjsLocales[language as keyof typeof dayjsLocales];
 
     if (options.dateFormat !== DateFormat.INHERIT) {
       locale = dayjsLocales[options.dateFormat];
     }
 
-    setDayjsLocale(locale || dayjsLocales.en);
+    return locale || dayjsLocales.en;
   }, [language, options.dateFormat]);
 
   /**
