@@ -1,7 +1,7 @@
 {
   "name": "business-panel",
   "description": "Displays events in a sleek calendar view, pulling from diverse data sources for seamless integration",
-  "version": "4.2.3",
+  "version": "4.2.4",
   "scripts": {
     "build": "webpack -c ./.config/webpack/webpack.config.ts --env production",
     "dev": "webpack -w -c ./.config/webpack/webpack.config.ts --env development",
