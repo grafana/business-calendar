@@ -18,7 +18,6 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Updated CI/CD workflows.
 - Added attestation permissions to CI workflow.
 - Updated development scripts.
-- Updated `AGENTS.md` to require explicit user confirmation before any file edit.
 
 ## [4.2.3] - 2026-04-23
 
