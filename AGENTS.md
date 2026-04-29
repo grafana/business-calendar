@@ -276,6 +276,8 @@ config files, and server dirs are excluded.
 
 - **CI** (`.github/workflows/push.yml`): Runs on push to `main` and all PRs. Uses `grafana/plugin-ci-workflows`.
 - **CD** (`.github/workflows/publish.yml`): Manual dispatch to dev/ops/prod environments.
+- **Coverage** (`.github/workflows/coverage.yml`): Runs on PRs; posts a Jest coverage comparison comment.
+- **PR File Changes** (`.github/workflows/pr-files.yml`): Runs on PRs; posts a grouped file-changes summary comment.
 - **Do NOT pin `grafana/plugin-ci-workflows` to a commit SHA.** Grafana's CI
   enforces tagged releases only (e.g., `@ci-cd-workflows/v7`). SHA pinning
   will fail the "Check for release channel" job. All other GitHub Actions
