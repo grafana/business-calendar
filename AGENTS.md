@@ -20,6 +20,8 @@ npm run dev            # Watch mode (webpack, development)
 npm run typecheck      # tsc --noEmit
 npm run lint           # ESLint (flat config)
 npm run lint:fix       # ESLint with auto-fix
+npm run markdownlint    # markdownlint-cli2 on AGENTS.md, CHANGELOG.md, README.md
+npm run spellcheck     # cspell on all source files
 npm start              # Docker Compose: pull + start Grafana
 npm stop               # Docker Compose: stop
 ```
@@ -79,21 +81,16 @@ Every directory has a barrel `index.ts`.
 - Use `@grafana/plugin-e2e` for E2E tests.
 - Grafana API docs:
   <https://grafana.com/developers/plugin-tools/llms.txt>
-- **Always run `npx markdownlint-cli2`** on any `.md`
-  file you create or modify (including `AGENTS.md`,
-  `README.md`, `CHANGELOG.md`) and fix all reported
-  issues before committing. When wrapping long lines,
-  fill each line as close to 120 characters as possible
-  rather than wrapping early.
+- **Always run `npm run markdownlint`** on any `.md` file you create or modify (including `AGENTS.md`,
+  `README.md`, `CHANGELOG.md`) and fix all reported issues before committing. When wrapping long lines,
+  fill each line as close to 120 characters as possible rather than wrapping early.
 - **Always run `npm run typecheck`** when `src/` files
   are changed and fix any type errors before committing.
 - **Always run `npm run lint`** before committing changes
   to `src/`. Fix errors with `npm run lint:fix` and verify
   no errors remain.
-- **Always run cspell before committing.** Run
-  `npx cspell -c cspell.config.json` on all
-  changed files and fix any issues. Add new words
-  to `cspell.config.json` if they are legitimate.
+- **Always run `npm run spellcheck`** before committing. Fix any issues and add new words to
+  `cspell.config.json` if they are legitimate.
 - **Always update `CHANGELOG.md` before committing.**
   Every commit must include the corresponding changelog
   entry. Do not commit code changes without first updating
@@ -276,6 +273,8 @@ config files, and server dirs are excluded.
 
 - **CI** (`.github/workflows/push.yml`): Runs on push to `main` and all PRs. Uses `grafana/plugin-ci-workflows`.
 - **CD** (`.github/workflows/publish.yml`): Manual dispatch to dev/ops/prod environments.
+- **Coverage** (`.github/workflows/coverage.yml`): Runs on PRs; posts a Jest coverage comparison comment.
+- **PR File Changes** (`.github/workflows/pr-files.yml`): Runs on PRs; posts a grouped file-changes summary comment.
 - **Do NOT pin `grafana/plugin-ci-workflows` to a commit SHA.** Grafana's CI
   enforces tagged releases only (e.g., `@ci-cd-workflows/v7`). SHA pinning
   will fail the "Check for release channel" job. All other GitHub Actions
