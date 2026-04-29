@@ -8,15 +8,12 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ### Changed
 
-- Prepared plugin for React 19 compatibility: requires Grafana 12.3.0 or newer.
+- Plugin now requires Grafana 12.3.0 or newer.
 
 ### Project Updates
 
-- Re-enabled React 19 preview image in Playwright E2E tests.
-- Updated development dependencies.
-- Fixed Grafana 13 E2E compatibility issues.
 - Updated CI/CD workflows.
-- Added attestation permissions to CI workflow.
+- Updated development dependencies.
 - Updated development scripts.
 
 ## [4.2.3] - 2026-04-23
