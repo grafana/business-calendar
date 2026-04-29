@@ -17,6 +17,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Fixed Grafana 13 E2E compatibility issues.
 - Updated CI/CD workflows.
 - Suppressed i18next promotional banner from test output.
+- Updated development scripts.
 - Updated `AGENTS.md` to require explicit user confirmation before any file edit.
 
 ## [4.2.3] - 2026-04-23
