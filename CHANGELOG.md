@@ -8,23 +8,14 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ### Changed
 
-- Re-enabled React 19 preview image in Playwright E2E tests.
-- Updated `@grafana/eslint-config` to 9.0.0, `@grafana/plugin-e2e` to 3.6.1, `@swc/core` to 1.15.32, `prettier` to
-  3.8.3, `webpack` to 5.106.2.
-- Prepared plugin for React 19 compatibility: externalized `react/jsx-runtime`, bumped `grafanaDependency` to
-  `>=12.3.0`, and updated `@grafana/data`, `@grafana/runtime`, `@grafana/ui` to 12.4.2.
-- Replaced `useEffect` + `setState` with `useMemo` in `useTimeRange`, `useAnnotationEvents`, and `useLocalizer`
-  hooks to satisfy `react-hooks/set-state-in-effect` rule.
-- Replaced `Array.from(Array(n))` with `Array.from({ length: n })` in `useAnnotationEvents` for consistency with
-  `useCalendarEvents`.
-- Fixed `useMemo` dependencies in `useColors` to satisfy `react-hooks/preserve-manual-memoization` rule.
-- Replaced `-- Dashboard --` datasource indirection in provisioned `panels.json` with a direct JSON API query to
-  fix Grafana 13 E2E panel loading race condition.
-- Skipped `Should add empty default calendar` E2E test on Grafana 13+ due to `@grafana/plugin-e2e` 3.x
-  `addPanel`/`refreshPanel` incompatibility with the Grafana 13 panel edit flow.
+- Prepared plugin for React 19 compatibility: requires Grafana 12.3.0 or newer.
 
 ### Project Updates
 
+- Re-enabled React 19 preview image in Playwright E2E tests.
+- Updated development dependencies.
+- Fixed Grafana 13 E2E compatibility issues.
+- Updated CI/CD workflows.
 - Updated `AGENTS.md` to require explicit user confirmation before any file edit.
 
 ## [4.2.3] - 2026-04-23
