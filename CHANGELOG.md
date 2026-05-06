@@ -22,6 +22,7 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Refactored internal hooks for React 19 compatibility.
 - Improved E2E test coverage and stability on Grafana 13+.
 - Improved CI workflows: coverage reporting, PR file summaries, and automated changelog stamping on release.
+- Removed `pr-files.yml` workflow; GitHub's native Files changed tab supersedes it.
 
 ## [4.2.3] - 2026-04-23
 
