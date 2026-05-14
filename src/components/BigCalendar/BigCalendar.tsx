@@ -8,7 +8,7 @@ import { Calendar, Components, Event } from 'react-big-calendar';
 import { useTranslation } from 'react-i18next';
 
 import { TEST_IDS } from '../../constants';
-import { useBigCalendarEvents, useCalendarRange, useLocalizer, useMessagesUpdate } from '../../hooks';
+import { useBigCalendarEvents, useCalendarRange, useDebouncedValue, useLocalizer, useMessagesUpdate } from '../../hooks';
 import { CalendarEvent, CalendarOptions, View } from '../../types';
 import { checkIfNodeType, getLanguage, returnCalendarEvent } from '../../utils';
 import { BigEventContent } from '../BigEventContent';
@@ -41,6 +41,15 @@ export const BigCalendar: React.FC<Props> = ({ height, events, timeRange, onChan
   const theme = useTheme2();
   const styles = useStyles2(getBigCalendarStyles);
   const libStyles = getLibStyles();
+
+  /**
+   * Debounced height key
+   *
+   * react-big-calendar month view doesn't recalculate row heights from style
+   * prop changes, so we remount on resize. Debouncing prevents a remount on
+   * every pixel during a panel drag.
+   */
+  const debouncedHeight = useDebouncedValue(height, 200);
 
   /**
    * Translation
@@ -251,7 +260,7 @@ export const BigCalendar: React.FC<Props> = ({ height, events, timeRange, onChan
       <Global styles={styles.global} />
       <Calendar
         culture={getLanguage(options?.dateFormat)}
-        key={height + (options.textSize ?? 0)}
+        key={debouncedHeight}
         dayLayoutAlgorithm="no-overlap"
         localizer={localizer}
         messages={messages}

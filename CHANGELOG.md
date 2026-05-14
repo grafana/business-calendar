@@ -6,6 +6,11 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Debounce the `Calendar` remount key on panel resize to avoid full tree rebuilds on every pixel change during a drag.
+- Remove `textSize` from the `Calendar` remount key; font size changes propagate via CSS without a remount.
+
 ### Project Updates
 
 - Added `.npmrc` with `ignore-scripts=true` to disable lifecycle scripts and mitigate supply-chain attack risk.
