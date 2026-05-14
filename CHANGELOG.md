@@ -12,6 +12,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Remove `textSize` from the `Calendar` remount key; font size changes propagate via CSS without a remount.
 - Memoize `firstDay` and `minutesOffset` in `useCalendarEvents` to avoid redundant locale and timezone
   calculations on every render.
+- Merge double `.map()` in `useCalendarEvents` into a single pass to halve intermediate array allocations
+  per frame on every data refresh.
 
 ### Project Updates
 
