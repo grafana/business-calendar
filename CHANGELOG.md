@@ -14,6 +14,9 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
   calculations on every render.
 - Merge double `.map()` in `useCalendarEvents` into a single pass to halve intermediate array allocations
   per frame on every data refresh.
+- Replace `dayjs` year extraction in `filterEventsByYear` with `Date.getFullYear()` to avoid constructing
+  dayjs objects per event in year view.
+- Memoize agenda view length (`daysInMonth`) in `BigCalendar` on the current date.
 
 ### Project Updates
 
