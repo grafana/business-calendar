@@ -75,7 +75,7 @@ test.describe('Volkovlabs Calendar Panel', () => {
   }) => {
     test.skip(
       parseFloat(grafanaVersion) >= 13,
-      'Skipped on Grafana 13+: addPanel/refreshPanel flow incompatible with @grafana/plugin-e2e 3.x'
+      'Skipped on Grafana 13+: setVisualization selector mismatch in @grafana/e2e-selectors — tab title resolves to "Visualizations" but UI shows "All visualizations" on 13.0.1'
     );
 
     /**
