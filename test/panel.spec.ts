@@ -71,7 +71,13 @@ test.describe('Volkovlabs Calendar Panel', () => {
   test('Should add empty default calendar', async ({
     readProvisionedDashboard,
     gotoDashboardPage,
+    grafanaVersion,
   }) => {
+    test.skip(
+      parseFloat(grafanaVersion) >= 13,
+      'Skipped on Grafana 13+: setVisualization selector mismatch in @grafana/e2e-selectors — tab title resolves to "Visualizations" but UI shows "All visualizations" on 13.0.1'
+    );
+
     /**
      * Go To Panels dashboard weekly.json
      * return dashboardPage
