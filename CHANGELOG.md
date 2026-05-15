@@ -8,6 +8,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ### Changed
 
+- Debounce the `Calendar` remount key on panel resize to avoid full tree rebuilds on every pixel change during a drag.
+- Remove `textSize` from the `Calendar` remount key; font size changes propagate via CSS without a remount.
 - Updated `@grafana/create-plugin` scaffolding from 7.0.8 to 7.6.0 (fixes TypeScript 6 `baseUrl`/`bundler` compat).
 - Externalized `react/jsx-runtime` and `react/jsx-dev-runtime` for React 19 compatibility.
 - Removed deprecated `@types/testing-library__jest-dom` dev dependency.
