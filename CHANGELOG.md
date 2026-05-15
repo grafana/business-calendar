@@ -14,6 +14,20 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
   calculations on every render.
 - Merge double `.map()` in `useCalendarEvents` into a single pass to halve intermediate array allocations
   per frame on every data refresh.
+- Updated `@grafana/create-plugin` scaffolding from 7.0.8 to 7.6.0 (fixes TypeScript 6 `baseUrl`/`bundler` compat).
+- Externalized `react/jsx-runtime` and `react/jsx-dev-runtime` for React 19 compatibility.
+- Removed deprecated `@types/testing-library__jest-dom` dev dependency.
+
+### CI/CD
+
+- Bumped `actions/create-github-app-token` v3.0.0 → v3.2.0.
+- Bumped `davelosert/vitest-coverage-report-action` v2.11.2 → v2.12.0.
+
+### Known Issues
+
+- `react-big-calendar` bundles `react-overlays` which uses `ReactDOM.findDOMNode` (removed in React 19). The code
+  path is only reached for class component instances and is unlikely to be hit in practice, but a permanent fix
+  requires an upstream release of `react-overlays` > 5.2.1.
 
 ### Project Updates
 
