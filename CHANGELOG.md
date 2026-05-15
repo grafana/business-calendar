@@ -6,6 +6,18 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Updated `@grafana/create-plugin` scaffolding from 7.0.8 to 7.6.0 (fixes TypeScript 6 `baseUrl`/`bundler` compat).
+- Externalized `react/jsx-runtime` and `react/jsx-dev-runtime` for React 19 compatibility.
+- Removed deprecated `@types/testing-library__jest-dom` dev dependency.
+
+### Known Issues
+
+- `react-big-calendar` bundles `react-overlays` which uses `ReactDOM.findDOMNode` (removed in React 19). The code
+  path is only reached for class component instances and is unlikely to be hit in practice, but a permanent fix
+  requires an upstream release of `react-overlays` > 5.2.1.
+
 ### Project Updates
 
 - Added `.npmrc` with `ignore-scripts=true` to disable lifecycle scripts and mitigate supply-chain attack risk.
