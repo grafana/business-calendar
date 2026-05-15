@@ -71,13 +71,7 @@ test.describe('Volkovlabs Calendar Panel', () => {
   test('Should add empty default calendar', async ({
     readProvisionedDashboard,
     gotoDashboardPage,
-    grafanaVersion,
   }) => {
-    test.skip(
-      parseFloat(grafanaVersion) >= 13,
-      'Skipped on Grafana 13+: addPanel/refreshPanel flow incompatible with @grafana/plugin-e2e 3.x'
-    );
-
     /**
      * Go To Panels dashboard weekly.json
      * return dashboardPage

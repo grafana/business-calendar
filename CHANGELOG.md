@@ -6,9 +6,15 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 ## [Unreleased]
 
+### Fixed
+
+- Re-enable `Should add empty default calendar` E2E test on Grafana 13+ by upgrading `@grafana/plugin-e2e` to
+  3.8.0, which adds support for Grafana 13's new dashboard layout and `addPanel` flow.
+
 ### Project Updates
 
 - Added `.npmrc` with `ignore-scripts=true` to disable lifecycle scripts and mitigate supply-chain attack risk.
+- Upgraded `@grafana/plugin-e2e` from 3.6.1 to 3.8.0 for Grafana 13 compatibility.
 
 ## [4.2.4] - 2026-04-29
 
