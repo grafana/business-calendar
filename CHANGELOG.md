@@ -10,13 +10,12 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 - Debounce the `Calendar` remount key on panel resize to avoid full tree rebuilds on every pixel change during a drag.
 - Remove `textSize` from the `Calendar` remount key; font size changes propagate via CSS without a remount.
-- Memoize `firstDay` and `minutesOffset` in `useCalendarEvents` to avoid redundant locale and timezone
-  calculations on every render.
-- Merge double `.map()` in `useCalendarEvents` into a single pass to halve intermediate array allocations
-  per frame on every data refresh.
+- Memoize `firstDay` in `useCalendarEvents` to avoid redundant locale lookups on every render.
 - Cache `Intl.DateTimeFormat` instances per timezone in `getMinutesOffsetFromTimeZone` to avoid
   re-allocating the formatter on every call; use `formatToParts` to eliminate locale-dependent string
   parsing entirely.
+- Merge double `.map()` in `useCalendarEvents` into a single pass to halve intermediate array allocations
+  per frame on every data refresh.
 - Move `minutesOffset` computation inside `useCalendarEvents` outer `useMemo` so the timezone offset
   refreshes on every dashboard time range change, fixing stale offsets after DST transitions.
 - Updated `@grafana/create-plugin` scaffolding from 7.0.8 to 7.6.0 (fixes TypeScript 6 `baseUrl`/`bundler` compat).
