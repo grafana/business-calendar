@@ -15,6 +15,9 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 - Added `.npmrc` with `ignore-scripts=true` to disable lifecycle scripts and mitigate supply-chain attack risk.
 - Upgraded `@grafana/plugin-e2e` from 3.6.1 to 3.8.0 for Grafana 13 compatibility.
+- Updated patch/minor dependencies: `@swc/core` 1.15.33, `@types/node` 24.12.4, `sass-loader` 16.0.8,
+  `@grafana/tsconfig` 2.1.0, `@playwright/test` 1.60.0.
+- Bumped Playwright Docker base image from `v1.59.1-noble` to `v1.60.0-noble`.
 
 ## [4.2.4] - 2026-04-29
 
