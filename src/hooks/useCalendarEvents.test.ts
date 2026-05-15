@@ -3,7 +3,16 @@ import { renderHook } from '@testing-library/react';
 import dayjs from 'dayjs';
 
 import { ColorMode } from '../types';
+import { getMinutesOffsetFromTimeZone } from '../utils';
 import { useCalendarEvents } from './useCalendarEvents';
+
+/**
+ * Mock ../utils
+ */
+jest.mock('../utils', () => ({
+  ...jest.requireActual('../utils'),
+  getMinutesOffsetFromTimeZone: jest.fn(jest.requireActual('../utils').getMinutesOffsetFromTimeZone),
+}));
 
 /**
  * Mock @grafana/data
@@ -556,5 +565,44 @@ describe('useCalendarEvents', () => {
         }),
       ])
     );
+  });
+
+  it('Should recompute minutesOffset when timeRange changes', () => {
+    /**
+     * Verify minutesOffset is recalculated on timeRange.to change so DST
+     * transitions are reflected on dashboard refresh, not just on timezone change.
+     */
+    const frames = [
+      {
+        text: { type: FieldType.string, name: 'text', values: ['event'], getLinks: () => null },
+        start: { type: FieldType.string, name: 'start', values: [getSafeDate()] },
+      },
+    ];
+
+    const timeRange1 = {
+      from: dateTime(getSafeDate()),
+      to: dateTime(getSafeDate()),
+      raw: { from: dateTime(getSafeDate()), to: dateTime(getSafeDate()) },
+    };
+
+    const timeRange2 = {
+      from: dateTime(new Date('2023-03-15 12:30')),
+      to: dateTime(new Date('2023-03-15 12:30')),
+      raw: { from: dateTime(new Date('2023-03-15 12:30')), to: dateTime(new Date('2023-03-15 12:30')) },
+    };
+
+    jest.mocked(getMinutesOffsetFromTimeZone).mockClear();
+
+    const { rerender } = renderHook(
+      ({ timeRange }) => useCalendarEvents(frames as any, { colors: ColorMode.FRAME } as any, [], timeRange, 'browser'),
+      { initialProps: { timeRange: timeRange1 } }
+    );
+
+    const callsAfterMount = jest.mocked(getMinutesOffsetFromTimeZone).mock.calls.length;
+    expect(callsAfterMount).toBeGreaterThan(0);
+
+    rerender({ timeRange: timeRange2 });
+
+    expect(jest.mocked(getMinutesOffsetFromTimeZone).mock.calls.length).toBeGreaterThan(callsAfterMount);
   });
 });

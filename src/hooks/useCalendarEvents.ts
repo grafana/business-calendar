@@ -30,16 +30,16 @@ export const useCalendarEvents = (
    */
   const firstDay = useMemo(() => (getLocaleData().firstDayOfWeek() === 0 ? 'week' : 'isoWeek'), []);
 
-  /**
-   * Minutes Offset from Browser Time Zone
-   *
-   * Memoized on timeZone — the non-UTC path constructs two dayjs objects and
-   * calls toLocaleString + diff on every call, which is otherwise wasted work
-   * on every render.
-   */
-  const minutesOffset = useMemo(() => getMinutesOffsetFromTimeZone(timeZone), [timeZone]);
-
   return useMemo(() => {
+    /**
+     * Minutes Offset from Browser Time Zone
+     *
+     * Computed inside the memo so it refreshes on every time range change
+     * (dashboard refresh). The formatter is cached in getMinutesOffsetFromTimeZone
+     * so this is cheap. Keeps the offset DST-correct without polling.
+     */
+    const minutesOffset = getMinutesOffsetFromTimeZone(timeZone);
+
     const to = dayjs(timeRange.to.valueOf()).add(minutesOffset, 'minutes');
     const endOfRangeWeek = to.endOf(firstDay as OpUnitType);
 
@@ -81,5 +81,5 @@ export const useCalendarEvents = (
         };
       });
     });
-  }, [timeRange.to, minutesOffset, firstDay, frames, options.descriptionField, options.colors, colors]);
+  }, [timeRange.to, timeZone, firstDay, frames, options.descriptionField, options.colors, colors]);
 };
