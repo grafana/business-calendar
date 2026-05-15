@@ -10,6 +10,11 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 
 - Debounce the `Calendar` remount key on panel resize to avoid full tree rebuilds on every pixel change during a drag.
 - Remove `textSize` from the `Calendar` remount key; font size changes propagate via CSS without a remount.
+- Memoize `firstDay` and `minutesOffset` in `useCalendarEvents` to avoid redundant locale and timezone
+  calculations on every render.
+- Cache `Intl.DateTimeFormat` instances per timezone in `getMinutesOffsetFromTimeZone` to avoid
+  re-allocating the formatter on every call; use `formatToParts` to eliminate locale-dependent string
+  parsing entirely.
 - Updated `@grafana/create-plugin` scaffolding from 7.0.8 to 7.6.0 (fixes TypeScript 6 `baseUrl`/`bundler` compat).
 - Externalized `react/jsx-runtime` and `react/jsx-dev-runtime` for React 19 compatibility.
 - Removed deprecated `@types/testing-library__jest-dom` dev dependency.

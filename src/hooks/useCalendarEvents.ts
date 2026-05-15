@@ -24,13 +24,20 @@ export const useCalendarEvents = (
 ): CalendarEvent[] => {
   /**
    * Week Start
+   *
+   * Memoized with no deps — locale data is set once at app init and never
+   * changes during a session.
    */
-  const firstDay = getLocaleData().firstDayOfWeek() === 0 ? 'week' : 'isoWeek';
+  const firstDay = useMemo(() => (getLocaleData().firstDayOfWeek() === 0 ? 'week' : 'isoWeek'), []);
 
   /**
    * Minutes Offset from Browser Time Zone
+   *
+   * Memoized on timeZone — the non-UTC path constructs two dayjs objects and
+   * calls toLocaleString + diff on every call, which is otherwise wasted work
+   * on every render.
    */
-  const minutesOffset = getMinutesOffsetFromTimeZone(timeZone);
+  const minutesOffset = useMemo(() => getMinutesOffsetFromTimeZone(timeZone), [timeZone]);
 
   return useMemo(() => {
     const to = dayjs(timeRange.to.valueOf()).add(minutesOffset, 'minutes');
