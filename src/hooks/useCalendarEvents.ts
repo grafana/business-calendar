@@ -36,6 +36,9 @@ export const useCalendarEvents = (
    * Memoized on timeZone — the non-UTC path constructs two dayjs objects and
    * calls toLocaleString + diff on every call, which is otherwise wasted work
    * on every render.
+   *
+   * Known limitation: offset is frozen until timeZone changes. A tab open
+   * across a DST transition will show stale offsets until the page reloads.
    */
   const minutesOffset = useMemo(() => getMinutesOffsetFromTimeZone(timeZone), [timeZone]);
 
