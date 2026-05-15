@@ -3,8 +3,39 @@ import { TimeZone } from '@grafana/schema';
 import dayjs from 'dayjs';
 import { Event, stringOrDate } from 'react-big-calendar';
 
-import { DEFAULT_LANGUAGE } from '../constants';
 import { CalendarEvent, EventField } from '../types';
+
+/**
+ * Intl.DateTimeFormat Cache
+ *
+ * toLocaleString() creates a new Intl.DateTimeFormat on every call — an expensive
+ * allocation. Cache one formatter per timezone string for the app lifetime.
+ */
+const tzFormatterCache = new Map<string, Intl.DateTimeFormat>();
+
+/**
+ * Get Time Zone Formatter
+ * @param timeZone
+ */
+const getTzFormatter = (timeZone: string): Intl.DateTimeFormat => {
+  if (!tzFormatterCache.has(timeZone)) {
+    tzFormatterCache.set(
+      timeZone,
+      new Intl.DateTimeFormat(undefined, {
+        timeZone,
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: false,
+      })
+    );
+  }
+
+  return tzFormatterCache.get(timeZone)!;
+};
 
 /**
  * Get Minutes Offset From Time Zone
@@ -28,23 +59,27 @@ export const getMinutesOffsetFromTimeZone = (timeZone: TimeZone) => {
     return new Date().getTimezoneOffset();
   }
 
-  const date = new Date();
+  const now = new Date();
 
   /**
-   * Browser Date
    * Reset milliseconds to prevent losing 1 minute in difference
    */
-  const browserDate = dayjs(date).set('milliseconds', 0);
+  now.setMilliseconds(0);
 
   /**
-   * Time Zone Date
+   * Extract date/time parts as rendered in the target timezone.
+   * Using formatToParts avoids locale-specific string parsing entirely.
    */
-  const timeZoneDate = dayjs(date.toLocaleString(DEFAULT_LANGUAGE, { timeZone }));
+  const parts = getTzFormatter(timeZone).formatToParts(now);
+  const get = (type: string) => parseInt(parts.find((p) => p.type === type)?.value ?? '0', 10);
 
   /**
-   * Time Zone offset from browser date
+   * Reconstruct the date from parts in local (browser) time to diff against now.
+   * % 24 handles the edge case where hour12:false returns 24 for midnight.
    */
-  return timeZoneDate.diff(browserDate, 'minute');
+  const tzDate = new Date(get('year'), get('month') - 1, get('day'), get('hour') % 24, get('minute'), get('second'));
+
+  return Math.round((tzDate.getTime() - now.getTime()) / 60000);
 };
 
 /**
