@@ -10,6 +10,7 @@ import { CalendarEvent, EventField } from '../types';
  *
  * toLocaleString() creates a new Intl.DateTimeFormat on every call — an expensive
  * allocation. Cache one formatter per timezone string for the app lifetime.
+ * Bounded by the ~600-entry IANA timezone database; no pruning needed.
  */
 const tzFormatterCache = new Map<string, Intl.DateTimeFormat>();
 
@@ -18,23 +19,23 @@ const tzFormatterCache = new Map<string, Intl.DateTimeFormat>();
  * @param timeZone
  */
 const getTzFormatter = (timeZone: string): Intl.DateTimeFormat => {
-  if (!tzFormatterCache.has(timeZone)) {
-    tzFormatterCache.set(
+  let formatter = tzFormatterCache.get(timeZone);
+
+  if (!formatter) {
+    formatter = new Intl.DateTimeFormat(undefined, {
       timeZone,
-      new Intl.DateTimeFormat(undefined, {
-        timeZone,
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        hour12: false,
-      })
-    );
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hour12: false,
+    });
+    tzFormatterCache.set(timeZone, formatter);
   }
 
-  return tzFormatterCache.get(timeZone)!;
+  return formatter;
 };
 
 /**
