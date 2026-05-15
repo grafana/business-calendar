@@ -235,6 +235,15 @@ export const BigCalendar: React.FC<Props> = ({ height, events, timeRange, onChan
     return date;
   }, [options.scrollToTime]);
 
+  /**
+   * Agenda View Length
+   *
+   * Days in the current month minus one, used to size the agenda view
+   * correctly. Memoized on date to avoid constructing a dayjs object on
+   * every render.
+   */
+  const agendaLength = useMemo(() => dayjs(date).daysInMonth() - 1, [date]);
+
   if (!isViewExist) {
     return (
       <Alert title={t('panel.noViewsTitle')} severity="info" data-testid={TEST_IDS.bigCalendar.noViewsMessage}>
@@ -278,7 +287,7 @@ export const BigCalendar: React.FC<Props> = ({ height, events, timeRange, onChan
         onSelectEvent={onSelectEvent}
         scrollToTime={scrollToTime}
         // Set length days for agenda view. 30 days by default which is not correct due to different months length
-        length={dayjs(date).daysInMonth() - 1}
+        length={agendaLength}
       />
     </div>
   );

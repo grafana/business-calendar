@@ -18,6 +18,9 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
   per frame on every data refresh.
 - Move `minutesOffset` computation inside `useCalendarEvents` outer `useMemo` so the timezone offset
   refreshes on every dashboard time range change, fixing stale offsets after DST transitions.
+- Replace `dayjs` year extraction in `filterEventsByYear` with `Date.getFullYear()` to avoid constructing
+  dayjs objects per event in year view.
+- Memoize agenda view length (`daysInMonth`) in `BigCalendar` on the current date.
 - Updated `@grafana/create-plugin` scaffolding from 7.0.8 to 7.6.0 (fixes TypeScript 6 `baseUrl`/`bundler` compat).
 - Externalized `react/jsx-runtime` and `react/jsx-dev-runtime` for React 19 compatibility.
 - Removed deprecated `@types/testing-library__jest-dom` dev dependency.

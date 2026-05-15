@@ -182,11 +182,11 @@ export const filterEventsByYear = (events: Event[] | undefined, date?: stringOrD
     return [];
   }
 
-  const targetYear = dayjs(date).year();
+  const targetYear = new Date(date as string | number | Date).getFullYear();
 
   return events.filter((event) => {
-    const startYear = event.start ? dayjs(event.start).year() : null;
-    const endYear = event.end ? dayjs(event.end).year() : null;
+    const startYear = event.start ? new Date(event.start).getFullYear() : null;
+    const endYear = event.end ? new Date(event.end).getFullYear() : null;
 
     return startYear === targetYear || endYear === targetYear;
   });
