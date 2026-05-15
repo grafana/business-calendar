@@ -36,7 +36,6 @@
     "@types/jest": "^29.5.14",
     "@types/node": "^24.12.4",
     "@types/react-big-calendar": "^1.16.2",
-    "@types/testing-library__jest-dom": "^5.14.9",
     "@types/webpack-env": "^1.18.8",
     "@volkovlabs/eslint-config": "^2.0.0",
     "@volkovlabs/jest-selectors": "^1.5.0",
