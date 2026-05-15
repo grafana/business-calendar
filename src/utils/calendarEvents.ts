@@ -76,7 +76,7 @@ export const getMinutesOffsetFromTimeZone = (timeZone: TimeZone) => {
 
   /**
    * Reconstruct the date from parts in local (browser) time to diff against now.
-   * % 24 handles the edge case where hour12:false returns 24 for midnight.
+   * % 24 guards against the ja-JP locale rendering midnight as hour 24.
    */
   const tzDate = new Date(get('year'), get('month') - 1, get('day'), get('hour') % 24, get('minute'), get('second'));
 
