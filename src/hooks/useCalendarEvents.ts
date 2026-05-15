@@ -24,15 +24,22 @@ export const useCalendarEvents = (
 ): CalendarEvent[] => {
   /**
    * Week Start
+   *
+   * Memoized with no deps — locale data is set once at app init and never
+   * changes during a session.
    */
-  const firstDay = getLocaleData().firstDayOfWeek() === 0 ? 'week' : 'isoWeek';
-
-  /**
-   * Minutes Offset from Browser Time Zone
-   */
-  const minutesOffset = getMinutesOffsetFromTimeZone(timeZone);
+  const firstDay = useMemo(() => (getLocaleData().firstDayOfWeek() === 0 ? 'week' : 'isoWeek'), []);
 
   return useMemo(() => {
+    /**
+     * Minutes Offset from Browser Time Zone
+     *
+     * Computed inside the memo so it refreshes on every time range change
+     * (dashboard refresh). The formatter is cached in getMinutesOffsetFromTimeZone
+     * so this is cheap. Keeps the offset DST-correct without polling.
+     */
+    const minutesOffset = getMinutesOffsetFromTimeZone(timeZone);
+
     const to = dayjs(timeRange.to.valueOf()).add(minutesOffset, 'minutes');
     const endOfRangeWeek = to.endOf(firstDay as OpUnitType);
 
@@ -43,45 +50,36 @@ export const useCalendarEvents = (
         return [];
       }
 
-      return Array.from({ length: frame.text.values.length })
-        .map((item, i) => {
-          /**
-           * Define description with correct order
-           */
-          const description =
-            options.descriptionField
-              ?.map((name) => frame.description.find((obj) => obj.name === name))
-              .map((field) => field?.values[i])
-              .filter((label) => label) || [];
+      return Array.from({ length: frame.text.values.length }).map<CalendarEvent>((item, i) => {
+        /**
+         * Define description with correct order
+         */
+        const description =
+          options.descriptionField
+            ?.map((name) => frame.description.find((obj) => obj.name === name))
+            .map((field) => field?.values[i])
+            .filter((label) => label) || [];
 
-          return {
-            text: frame.text?.display
-              ? (formattedValueToString(frame.text.display(frame.text?.values[i])) as string)
-              : frame.text?.values[i],
-            description: description,
-            start: frame.start?.values[i],
-            end: frame.end?.values[i],
-            labels: frame.labels?.map((field) => field.values[i]).filter((label) => label),
-            links: frame.text?.getLinks!({ valueRowIndex: i }),
-            color: frame.color?.values[i],
-            location: frame.location?.values[i],
-          };
-        })
-        .map<CalendarEvent>(({ text, description, labels, links, start, end, color, location }, i) => {
-          const idx = options.colors === ColorMode.FRAME ? frameIdx : i;
-          return {
-            text,
-            description,
-            labels,
-            start: dayjs(start).add(minutesOffset, 'minutes'),
-            color:
-              (options.colors === ColorMode.THRESHOLDS && colorFn?.(color).color) ||
-              colors[Math.floor(idx % colors.length)],
-            links,
-            end: frame.end ? (end ? dayjs(end).add(minutesOffset, 'minutes') : endOfRangeWeek) : undefined,
-            location,
-          };
-        });
+        const idx = options.colors === ColorMode.FRAME ? frameIdx : i;
+        const start = frame.start?.values[i];
+        const end = frame.end?.values[i];
+        const color = frame.color?.values[i];
+
+        return {
+          text: frame.text?.display
+            ? (formattedValueToString(frame.text.display(frame.text?.values[i])) as string)
+            : frame.text?.values[i],
+          description,
+          labels: frame.labels?.map((field) => field.values[i]).filter((label) => label),
+          links: frame.text?.getLinks!({ valueRowIndex: i }),
+          start: dayjs(start).add(minutesOffset, 'minutes'),
+          color:
+            (options.colors === ColorMode.THRESHOLDS && colorFn?.(color).color) ||
+            colors[Math.floor(idx % colors.length)],
+          end: frame.end ? (end ? dayjs(end).add(minutesOffset, 'minutes') : endOfRangeWeek) : undefined,
+          location: frame.location?.values[i],
+        };
+      });
     });
-  }, [timeRange.to, minutesOffset, firstDay, frames, options.descriptionField, options.colors, colors]);
+  }, [timeRange.to, timeZone, firstDay, frames, options.descriptionField, options.colors, colors]);
 };
