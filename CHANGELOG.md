@@ -12,6 +12,11 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 - Externalized `react/jsx-runtime` and `react/jsx-dev-runtime` for React 19 compatibility.
 - Removed deprecated `@types/testing-library__jest-dom` dev dependency.
 
+### CI/CD
+
+- Bumped `actions/create-github-app-token` v3.0.0 → v3.2.0.
+- Bumped `davelosert/vitest-coverage-report-action` v2.11.2 → v2.12.0.
+
 ### Known Issues
 
 - `react-big-calendar` bundles `react-overlays` which uses `ReactDOM.findDOMNode` (removed in React 19). The code
