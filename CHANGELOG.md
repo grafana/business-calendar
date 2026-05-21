@@ -28,6 +28,8 @@ This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.
 ### CI/CD
 
 - Bumped `actions/create-github-app-token` v3.0.0 → v3.2.0.
+- Replaced `stamp-changelog` publish job with `check-changelog`: fails if `CHANGELOG.md` contains an `[Unreleased]` section,
+  requiring a version matching `package.json` before release.
 - Bumped `davelosert/vitest-coverage-report-action` v2.11.2 → v2.12.0.
 
 ### Known Issues
