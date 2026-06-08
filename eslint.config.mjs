@@ -3,7 +3,6 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import prettierConfig from 'eslint-config-prettier/flat';
 import grafanaConfig from '@grafana/eslint-config/flat.js';
-import eslintConfig from '@volkovlabs/eslint-config';
 
 /**
  * Filter out legacy react-hooks config from @grafana/eslint-config.
@@ -27,9 +26,9 @@ export default defineConfig(
       'react-hooks/exhaustive-deps': 'warn',
     },
   },
-  eslintConfig,
   prettierConfig,
   {
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: tsParser,
       parserOptions: {

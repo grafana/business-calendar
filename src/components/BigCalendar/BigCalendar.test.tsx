@@ -1,7 +1,7 @@
 import { createTheme, dateTime, LinkTarget } from '@grafana/data';
 import { locationService } from '@grafana/runtime';
 import { act, fireEvent, render, screen } from '@testing-library/react';
-import { getJestSelectors } from '@volkovlabs/jest-selectors';
+import { getJestSelectors } from '../../test-utils/jest-selectors';
 import dayjs from 'dayjs';
 import React, { SyntheticEvent } from 'react';
 import { Calendar, CalendarProps, Event } from 'react-big-calendar';

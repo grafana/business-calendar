@@ -4,6 +4,12 @@ All notable changes to the **Business Calendar Panel** plugin for Grafana are do
 
 This changelog follows the [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format and adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Changed
+
+- Removed dependencies on `@volkovlabs/eslint-config` and `@volkovlabs/jest-selectors`. Jest selector helpers (`getJestSelectors`, `createSelector`) are now inlined under `src/test-utils/jest-selectors.ts`. ESLint now relies solely on `@grafana/eslint-config`, with existing rule violations captured in `eslint-suppressions.json`.
+
 ## [4.2.4] - 2026-05-21
 
 ### Changed
