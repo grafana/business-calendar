@@ -73,7 +73,7 @@
     "@grafana/runtime": "12.4.3",
     "@grafana/ui": "12.4.3",
     "dayjs": "^1.11.13",
-    "i18next": "^25.3.2",
+    "i18next": "^26.0.0",
     "react": "18.3.1",
     "react-big-calendar": "^1.19.4",
     "react-dom": "18.3.1",
